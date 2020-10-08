@@ -1,0 +1,17 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+<loc>https://www.techadvisr.com/</loc>
+<lastmod>2020-10-08T00:12:20+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://www.techadvisr.com/index.html</loc>
+<lastmod>2020-10-08T00:12:20+00:00</lastmod>
+<priority>0.0</priority>
+</url>
+<url>
+<loc>https://www.techadvisr.com/index-amp.html</loc>
+<lastmod>2020-10-08T00:12:20+00:00</lastmod>
+<priority>0.0</priority>
+</url>
+</urlset>

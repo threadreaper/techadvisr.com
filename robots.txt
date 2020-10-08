@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /sitemap.html
+
+Sitemap: https://techadvisr.com/sitemap.xml
