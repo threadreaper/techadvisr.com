@@ -144,10 +144,6 @@ a {
 	width: 100%;
 }
 
-.desktop {
-	display: none;
-}
-
 @media screen and (min-width: 992px) {
 	.menu {
 		display: none;
@@ -157,6 +153,13 @@ a {
 		margin: 10px;
 	}
 }
+
+.logo {
+    min-width: 120px;
+    max-width: 208px;
+    width: 100%;
+}
+
 
 #splash {
 	height: 633px;
@@ -332,8 +335,10 @@ footer {
 	width: 100%;
 }
 
-.social-media a {
-	margin-right: 15%;
+@media screen and (min-width: 450px) {
+    .social-media a {
+        margin-right: 5%;
+    }
 }
 
 .main {
