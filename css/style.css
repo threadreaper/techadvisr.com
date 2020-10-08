@@ -210,9 +210,18 @@ a.splash-button {
 	justify-content: center;
 	flex-direction: column;
 	height: 100vh;
-	color: #e7e0cf;
-	font-size: 50px;
-	background-color: #333333;
+	color: var(--on-secondary);
+	background-color: var(--secondary-light);
+    font-size: 48px;
+}
+
+.popup a,
+.popup a:visited {
+    color: var(--neutral);
+}
+
+.popup a:active {
+    color: var(--primary);
 }
 
 .flex40 {
@@ -220,19 +229,11 @@ a.splash-button {
 	flex-basis: 40%;
 }
 
-.hamburger-menu {
-	display: flex;
-	align-items: center;
-	align-content: center;
-	justify-content: center;
-	flex-direction: column;
-	color: #e7e0cf;
-	font-size: 25px;
-}
+
 
 .short {
 	width: 100px;
-	border: 2px solid #fa6400;
+	border: 2px solid var(--primary);
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
@@ -265,6 +266,7 @@ form .button {
 
 .close {
 	align-self: flex-end;
+    margin-right: 3%;
 }
 
 .section-title {
