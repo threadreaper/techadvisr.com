@@ -160,6 +160,16 @@ a {
     width: 100%;
 }
 
+.header span {
+    color: var(--neutral);
+    margin-right: 5px;
+}
+
+@media screen and (min-width: 992px) {
+    .header span:hover {
+        color: var(--primary);
+    }
+}
 
 #splash {
 	height: 633px;
@@ -322,6 +332,12 @@ footer {
 
 .footer-links li {
 	margin-bottom: 7px;
+}
+
+@media screen and (min-width: 992px) {
+    .footer-links li:hover {
+        color: var(--primary);
+    }
 }
 
 .footer-right-wrapper {
