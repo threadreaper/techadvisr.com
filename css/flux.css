@@ -207,8 +207,8 @@ a {
 }
 .primary {
 	background: linear-gradient(to bottom right, var(--primary-light), var(--primary));
-	border: 3px outset var(--primary-light);
-	padding: 7px;
+	border: 1px solid var(--secondary);
+	padding: 9px;
 	border-radius: 6px;
     color: var(--secondary);
 	margin: 10px;
@@ -218,7 +218,7 @@ a {
 
 @media screen and (min-width: 992px) {
 	.primary:hover {
-		border: 1px inset var(--primary-light);
+		border: 1px solid var(--secondary);
 		padding: 9px;	
 		box-shadow: inset 2px 2px 5px var(--secondary-light);
 	}
@@ -226,8 +226,8 @@ a {
 
 .secondary {
 	background: linear-gradient(to bottom right, var(--neutral-offset), var(--secondary-light));
-	border: 3px outset var(--neutral-offset);
-	padding: 7px;
+	border: 1px solid var(--secondary);
+	padding: 9px;
 	border-radius: 6px;
     color: var(--secondary-dark);
 	margin: 10px;
@@ -237,7 +237,7 @@ a {
 
 @media screen and (min-width: 992px) {
 	.secondary:hover {
-		border: 1px inset var(--neutral-offset);
+		border: 1px solid var(--secondary);
 		padding: 9px;	
 		box-shadow: inset 2px 2px 5px var(--secondary-light);
 	}
@@ -245,8 +245,8 @@ a {
 
 .neutral {
 	background: linear-gradient(to bottom right, var(--neutral), var(--neutral-offset));
-	border: 3px outset var(--neutral-offset);
-	padding: 7px;
+	border: 1px solid var(--secondary);
+	padding: 9px;
 	border-radius: 6px;
 	margin: 10px;
 	min-height: 48px;
@@ -255,7 +255,7 @@ a {
 
 @media screen and (min-width: 992px) {
 	.neutral:hover {
-		border: 1px inset var(--neutral-offset);
+		border: 1px solid var(--secondary);
 		padding: 9px;	
 		box-shadow: inset 2px 2px 5px var(--secondary-light);
 	}
@@ -358,7 +358,7 @@ a.button {
 	opacity: 1;
 	top: -2px;
 	left: 0;
-	border-radius: 4px;
+	border-radius: 6px;
 	border: 1px solid var(--secondary);
 	height: 25px;
 	width: 25px;
@@ -548,7 +548,7 @@ a.button {
 	height: 15px;
 	cursor: pointer;
 	background: var(--primary);
-	border-radius: 4px;
+	border-radius: 6px;
 	border: 0.2px solid var(--secondary-dark);
 }
 
@@ -565,7 +565,7 @@ a.button {
 .toggle input[type=range]::-ms-fill-lower {
 	background: var(--primary);
 	border: 0.2px solid var(--secondary-dark);
-	border-radius: 4px;
+	border-radius: 6px;
 }
 
 .toggle input[type=range]:focus::-ms-fill-lower {
@@ -575,7 +575,7 @@ a.button {
 .toggle input[type=range]::-ms-fill-upper {
 	background: var(--primary);
 	border: 0.2px solid var(--secondary-dark);
-	border-radius: 4px;
+	border-radius: 6px;
 }
 
 .toggle input[type=range]:focus::-ms-fill-upper {
@@ -598,7 +598,7 @@ a.button {
 	font: 400 15px "Lato";
 	width: 100%;
 	letter-spacing: 1px;
-	border-radius: 4px;
+	border-radius: 6px;
 	box-shadow: inset 3px 3px 4px var(--secondary);
 	border: 0;
 	padding: 7px;
@@ -720,7 +720,7 @@ a.button {
 }
 
 .card {
-	border-radius: 4px;
+	border-radius: 6px;
 	max-width: 180px;
 	height: auto;
 	border: 1px solid var(--secondary-light);
@@ -731,7 +731,6 @@ a.button {
 .card-top {
 	min-height: 37px;
     height: auto;
-	background: var(--neutral-offset);
 	font: 17px var(--font-family-2);
 	padding: 10px;
 }
@@ -744,7 +743,6 @@ a.button {
 .card-content {
 	padding: 10px;
 	margin-bottom: auto;
-	background: var(--neutral-offset);
 	font: 13px var(--font-family-2);
 	letter-spacing: normal;
 }

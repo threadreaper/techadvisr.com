@@ -345,7 +345,7 @@ footer {
     margin: auto;
     margin-top: 60px;
     background: var(--neutral-offset);
-    border-radius: 4px;
+    border-radius: 6px;
     border: 2px outset var(--neutral);
     box-shadow: 2px 2px 3px var(--secondary-light);   
 }
@@ -390,7 +390,7 @@ footer {
 .feature-image {
     width: 100%;
     height: auto;
-    border-radius: 4px;
+    border-radius: 6px;
     box-shadow: 2px 2px 3px var(--secondary-light);
 }
 
@@ -417,7 +417,7 @@ footer {
     border: 1px solid var(--secondary-light);
     margin: 1%;
     width: 98%;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 .summary h4 {
@@ -452,7 +452,7 @@ footer {
 }
 
 .summary-image {
-    border-radius: 4px;
+    border-radius: 6px;
     width: 70%;
 }
 
@@ -465,5 +465,4 @@ footer {
     border: 1px solid var(--secondary-light);
     align-self: flex-end;
     margin-right: 3%;
-    color: var(--on-neutral);
 }
