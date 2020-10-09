@@ -13,13 +13,13 @@ h1 {
 h2 {
 	font: 800 7vmin var(--font-family-1);
 	letter-spacing: -0.5px;
-	text-shadow: 2px 2px 4px var(--secondary);
+	text-shadow: 2px 2px 3px var(--secondary-light);
 }
 
 h3 {
 	letter-spacing: normal;
 	font: 700 6vmin var(--font-family-1);
-	text-shadow: 2px 2px 4px var(--secondary);
+	text-shadow: 2px 2px 3px var(--secondary-light);
 }
 
 h4 {
@@ -65,10 +65,9 @@ h6 {
 	text-transform: uppercase;
 }
 
-a.primary {
-    text-decoration: none;
-    color: var(--on-primary);
-}
+
+
+
 
 .caption {
 	font: 13px var(--font-family-2);
@@ -89,7 +88,7 @@ a.primary {
 	--secondary-light: #696969;
 	--secondary-dark: #000000;
 	--neutral: #f2f2f2;
-	--neutral-offset: #e9e9e9;
+	--neutral-offset: #ccc;
 	--on-primary: #222222;
 	--on-secondary: #f2f2f2;
 	--on-neutral: #222222;
@@ -140,7 +139,7 @@ p {
 }
 
 a {
-	text-decoration: underline;
+    color: inherit;
 }
 
 .icon {
@@ -188,70 +187,85 @@ a {
     width: 4.5rem;
 }
 
+
 .primary {
 	background: linear-gradient(to bottom right, var(--primary-light), var(--primary));
 	border: 3px outset var(--primary-light);
 	padding: 7px;
-	text-shadow: 2px 2px 2px var(--secondary-light);
-	padding: 15px;
-	border-radius: 4px;
+	border-radius: 6px;
 	margin: 10px;
 	min-height: 48px;
-	box-shadow: 2px 2px 5px var(--secondary);
-}
-
-.primary a:hover {
-    color: var(--on-primary);
+	box-shadow: 2px 2px 3px var(--secondary-light);
 }
 
 @media screen and (min-width: 992px) {
 	.primary:hover {
-		border: 2px inset var(--secondary-light);
+		border: 2px inset var(--primary-light);
 		padding: 8px;
-		transition: all 0.4s;
-		box-shadow: inset -2px -2px 5px var(--primary-light), inset 2px 2px 5px var(--secondary-light);
+        box-shadow: inset -2px -2px 5px var(--primary-light), inset 2px 2px 5px var(--secondary-light);
+	}
+}
+.primary {
+	background: linear-gradient(to bottom right, var(--primary-light), var(--primary));
+	border: 3px outset var(--primary-light);
+	padding: 7px;
+	border-radius: 6px;
+    color: var(--secondary);
+	margin: 10px;
+	min-height: 48px;
+    box-shadow: 2px 2px 3px var(--secondary-light);
+}
+
+@media screen and (min-width: 992px) {
+	.primary:hover {
+		border: 1px inset var(--primary-light);
+		padding: 9px;	
+		box-shadow: inset 2px 2px 5px var(--secondary-light);
 	}
 }
 
 .secondary {
-	background: linear-gradient(to bottom right, var(--secondary-light), var(--secondary));
-	border: 3px outset var(--secondary);
+	background: linear-gradient(to bottom right, var(--neutral-offset), var(--secondary-light));
+	border: 3px outset var(--neutral-offset);
 	padding: 7px;
-	color: var(--on-secondary);
-	padding: 15px;
-	border-radius: 4px;
+	border-radius: 6px;
+    color: var(--secondary-dark);
 	margin: 10px;
 	min-height: 48px;
-	box-shadow: 2px 2px 5px var(--secondary);
+    box-shadow: 2px 2px 3px var(--secondary-light);
 }
 
 @media screen and (min-width: 992px) {
 	.secondary:hover {
-		border: 2px inset var(--secondary-light);
-		padding: 8px;
-		transition: all 0.4s;
-		box-shadow: inset -2px -2px 5px var(--secondary-light), inset 2px 2px 5px var(--secondary-dark);
+		border: 1px inset var(--neutral-offset);
+		padding: 9px;	
+		box-shadow: inset 2px 2px 5px var(--secondary-light);
 	}
 }
 
 .neutral {
 	background: linear-gradient(to bottom right, var(--neutral), var(--neutral-offset));
-	border: 3px outset var(--secondary);
+	border: 3px outset var(--neutral-offset);
 	padding: 7px;
-	padding: 15px;
-	border-radius: 4px;
+	border-radius: 6px;
 	margin: 10px;
 	min-height: 48px;
-	box-shadow: 2px 2px 5px var(--secondary);
+    box-shadow: 2px 2px 3px var(--secondary-light);
 }
 
 @media screen and (min-width: 992px) {
 	.neutral:hover {
-		border: 2px inset var(--secondary-light);
-		padding: 8px;
-		transition: all 0.4s;
+		border: 1px inset var(--neutral-offset);
+		padding: 9px;	
 		box-shadow: inset 2px 2px 5px var(--secondary-light);
 	}
+}
+
+a.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .wrapper {
@@ -266,18 +280,19 @@ a {
     padding-bottom: 10px;
 }
 
-.wrapper a {
-    color: var(--primary-dark);
+.wrapper a.primary {
+    color: var(--on-primary);
+    text-decoration: none;
 }
 
-.wrapper a:active {
-    color: var(--primary);
+.wrapper a.secondary {
+    color: var(--secondary-dark);
+    text-decoration: none;
 }
 
-@media screen and (min-width: 992px) {
-    .wrapper a:hover {
-        color: var(--primary);
-    }
+.wrapper a.neutral {
+    color: var(--on-neutral);
+    text-decoration: none;
 }
 
 .wrapper-offset-secondary {
@@ -291,39 +306,6 @@ a {
 	color: var(--on-secondary);
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-.wrapper-offset-secondary a {
-    color: var(--neutral);
-}
-
-.wrapper-offset-secondary a:active {
-    color: var(--primary);
-}
-
-@media screen and (min-width: 992px) {
-    .wrapper a:hover {
-        color: var(--primary);
-    }
-}
-
-.wrapper-offset-secondary button {
-	box-shadow: 2px 2px 5px var(--secondary);
-}
-
-@media screen and (min-width: 992px) {
-	.wrapper-offset-secondary .secondary:hover {
-		border: 2px inset var(--secondary);
-		padding: 8px;
-	}
-}
-
-.wrapper-offset-secondary a {
-	color: var(--on-secondary);
-}
-
-.wrapper-offset-secondary a:hover {
-	color: var(--primary);
 }
 
 .wrapper-offset-primary {
@@ -348,9 +330,7 @@ a {
 }
 
 @media screen and (min-width: 992px) {
-    .wrapper a:hover {
-        color: var(--secondary-dark);
-    }
+
 }
 
 .checkbox {
@@ -741,7 +721,7 @@ a {
 
 .card {
 	border-radius: 4px;
-	max-width: 20vw;
+	max-width: 180px;
 	height: auto;
 	border: 1px solid var(--secondary-light);
 	margin: auto;

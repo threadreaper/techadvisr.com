@@ -193,12 +193,9 @@ a {
 }
 
 a.splash-button {
-	display: block;
-	text-align: center;
 	width: 200px;
 	margin: auto;
 	margin-top: 20px;
-    color: var(--on-primary);
     -webkit-animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 }
