@@ -344,8 +344,8 @@ footer {
     width: 90%;
     margin: auto;
     margin-top: 60px;
-    background: var(--neutral-offset);
     border-radius: 6px;
+    background: var(--neutral-offset);
     border: 2px outset var(--neutral);
     box-shadow: 2px 2px 3px var(--secondary-light);   
 }
@@ -370,16 +370,18 @@ footer {
     border-bottom: 1px solid var(--secondary-light);
     width: 30%;
     height: auto;
-    padding: 30px;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    text-align: right;
 }
 
 .author {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: space-around;
 }
 
 .featured {
@@ -406,6 +408,9 @@ footer {
 }
 
 .icon-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
     margin-top: 30px;
     width: 100%;
     text-align: right;
