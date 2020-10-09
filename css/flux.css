@@ -741,8 +741,7 @@ a {
 
 .card {
 	border-radius: 4px;
-	overflow: hidden;
-	width: 30vw;
+	max-width: 20vw;
 	height: auto;
 	border: 1px solid var(--secondary-light);
 	margin: auto;
@@ -750,7 +749,8 @@ a {
 }
 
 .card-top {
-	height: 37px;
+	min-height: 37px;
+    height: auto;
 	background: var(--neutral-offset);
 	font: 17px var(--font-family-2);
 	padding: 10px;

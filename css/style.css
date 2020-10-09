@@ -183,13 +183,12 @@ a {
 }
 
 #headline h1 {
-	font-size: 2.5rem;
-	text-shadow: 2px 2px 3px #000;
+    text-shadow: 2px 2px 3px var(--secondary);
 }
 
+
+
 #splash-text {
-	font: 1.8vmax var(--font-family-1);
-	letter-spacing: normal;
 	width: 43vw;
 }
 
@@ -199,6 +198,7 @@ a.splash-button {
 	width: 200px;
 	margin: auto;
 	margin-top: 20px;
+    color: var(--on-primary);
     -webkit-animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 }
