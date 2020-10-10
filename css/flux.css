@@ -787,7 +787,7 @@ a.button {
     position: fixed;
     z-index: 5;
     right: 30px;
-    bottom: 20px;
+    bottom: 200px;
     visibility: hidden;
 }
 
