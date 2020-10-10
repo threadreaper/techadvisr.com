@@ -335,7 +335,7 @@ footer {
 }
 
 @media screen and (min-width: 992px) {
-    .footer-links li:hover {
+    .footer-links {
         font-size: 13px;
     }
 }
