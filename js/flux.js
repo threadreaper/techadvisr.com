@@ -20,13 +20,13 @@ function showModal() {
   if (storage.getItem('modalSeen'))
         return;
     storage.setItem('modalSeen','true');
-    modal.style.display = 'block';
+    modal.style.visibility = 'visible';
 }
 
 modalReveal = document.querySelector('.modal-reveal');
 if(modalReveal){
     modalReveal.addEventListener('click', function() {
-        modal.style.display = 'block';
+        modal.style.display = 'visible';
     });
 }
 
@@ -39,7 +39,7 @@ document.addEventListener("click", (evt) => {
             }
                 targetElement = targetElement.parentNode;
         } while (targetElement);
-                modal.style.display = 'none';
+                modal.style.visibility = 'hidden';
     }
 });
 
@@ -47,7 +47,7 @@ modalClose = document.querySelector('.modal-close');
 
 if(modalClose) {
     modalClose.addEventListener('click', function() {
-        modal.style.display = 'none';
+        modal.style.visibility = 'hidden';
     });
 
     document.onscroll = function(){ 
