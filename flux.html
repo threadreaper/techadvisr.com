@@ -1,6 +1,7 @@
 <!doctype html>
+<html lang="en">
 <head>
-    <link rel=stylesheet href="css/flux.min.css">
+    <link rel=stylesheet href="css/flux.css">
     <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -27,6 +28,7 @@
 		<meta name="msapplication-square150x150logo" content="https://www.techadvisr.com/favicons/mstile-150x150.png" />
 		<meta name="msapplication-wide310x150logo" content="https://www.techadvisr.com/favicons/mstile-310x150.png" />
 		<meta name="msapplication-square310x310logo" content="https://www.techadvisr.com/favicons/mstile-310x310.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="wrapper-offset-primary">
@@ -241,51 +243,63 @@
     </div>
 </div>
 <div class="wrapper">
-    <div class="text-input-container">
-        <input class="text-input" type="text">
-        <label>First Name</label>
-        <span class="focus-border">
-           <i></i>
-        </span>
+    <div style="width: 45vw;">
+        <div class="text-input-container">
+            <input class="text-input" type="text">
+            <label>First Name</label>
+            <span class="focus-border">
+               <i></i>
+            </span>
+        </div>
     </div>
-    <div class="text-input-container">
-        <textarea class="text-input"  rows=2></textarea>
-        <label>Message</label>
-        <span class="focus-border">
-            <i></i>
-        </span>
+    <div style="width: 45vw;">
+        <div class="text-input-container">
+            <textarea class="text-input"  rows=2></textarea>
+            <label>Message</label>
+            <span class="focus-border">
+                <i></i>
+            </span>
+        </div>
     </div>
 </div>
 <div class="wrapper-offset-primary">
-    <div class="text-input-container">
-        <input class="text-input"  type="text">
-        <label>First Name</label>
-        <span class="focus-border">
-           <i></i>
-        </span>
+    <div style="width: 45vw;">
+        <div class="text-input-container">
+            <input class="text-input" type="text">
+            <label>First Name</label>
+            <span class="focus-border">
+               <i></i>
+            </span>
+        </div>
     </div>
-    <div class="text-input-container">
-        <textarea class="text-input" rows=2></textarea>
-        <label>Message</label>
-        <span class="focus-border">
-            <i></i>
-        </span>
+    <div style="width: 45vw;">
+        <div class="text-input-container">
+            <textarea class="text-input"  rows=2></textarea>
+            <label>Message</label>
+            <span class="focus-border">
+                <i></i>
+            </span>
+        </div>
     </div>
 </div>
 <div class="wrapper-offset-secondary">
-    <div class="text-input-container">
-        <input class="text-input"  type="text">
-        <label>First Name</label>
-        <span class="focus-border">
-           <i></i>
-        </span>
+    <div style="width: 45vw;">
+        <div class="text-input-container">
+            <input class="text-input" type="text">
+            <label>First Name</label>
+            <span class="focus-border">
+               <i></i>
+            </span>
+        </div>
     </div>
-    <div class="text-input-container">
-        <textarea class="text-input"  rows=2></textarea>
-        <label>Message</label>
-        <span class="focus-border">
-            <i></i>
-        </span>
+    <div style="width: 45vw;">
+        <div class="text-input-container">
+            <textarea class="text-input"  rows=2></textarea>
+            <label>Message</label>
+            <span class="focus-border">
+                <i></i>
+            </span>
+        </div>
     </div>
 </div>    
   <div class="wrapper">
@@ -325,6 +339,7 @@
             <h3>Iconography</h3>
             <hr style="margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;" />
         </div>
+    </div>
     <div class="wrapper-offset-primary">
         <p>The icons can be generated in the kit's primary, secondary and neutral colors by applying the classes .filter-primary, .filter-secondary and .filter-neutral, respectively.  These classes aren't in the CSS, they are dynamically handled by JavaScript, which reads in the customized colors from CSS variables and calculates a filter to apply to the .svg icon.  Again, it might seem as though we're re-creating the wheel when fontawesome is a thing, but this iconset has had its code thoroughly optimized for maximum performance and perhaps most importantly, all the icons have the same 1:1 aspect ratio, so they will line up neatly when trying to put them in a row, unlike fontawesome and other such packages. Mouseover effects are handled automatically by JavaScript.  Classes have been provided to scale the icons to various sizes, as detailed below.</p>
     </div>
@@ -362,5 +377,54 @@
             <img src="images/mail.svg" class="icon icon-8x filter-secondary"/>
         </div>
     </div>
-<script type="text/javascript" src="js/flux.min.js"></script>
-                
+    <div class="wrapper">
+          <div style="width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
+            <h3>Modals</h3>
+            <hr style="margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;" />
+        </div>
+    </div>
+    <div class="wrapper">
+        <p>Click the button below to reveal a modal popup.  Clicking the close button in the modal or clicking anywhere outside of it will cause the modal to close. A modal popup can be launched from a button given the class ".modal-reveal" in this manner.  Use the following code block just before the closing &lt;/body> tag to create your modal popup:</p>
+        <p class=caption style="white-space: pre-line;">
+            &lt;div class=&quot;modal&quot;&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;modal-content&quot;&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;modal-close&quot;&gt;X&lt;/div&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;modal-headline&quot;&gt;Our Strategies Grow Businesses!&lt;/span&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class=&quot;caption&quot;&gt;Tech Tips, News, Reviews &amp; Exclusive Promotions for Preferred Customers delivered right to your inbox!&lt;/p&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;form&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;text-input-container&quot;&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class=&quot;text-input&quot; type=&quot;text&quot;&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;E-mail Address&lt;/label&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;focus-border&quot;&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&gt;&lt;/i&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;submit&quot; class=&quot;modal-button primary button&quot;&gt;Submit&lt;/button&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/form&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;    
+            &lt;/div&gt;</p>
+        <button class="neutral button modal-reveal">Trigger Modal</button>
+        <div class="modal">
+            <div class="modal-content">
+                <div class="modal-close">X</div>
+                <span class="modal-headline">Our Strategies Grow Businesses!</span>
+                <p class="caption">Tech Tips, News, Reviews & Exclusive Promotions for Preferred Customers delivered right to your inbox!</p>
+                <form>
+                    <div class="text-input-container">
+                        <input class="text-input" type="text">
+                        <label>E-mail Address</label>
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
+                    <button type="submit" class="modal-button primary button">Submit</button>
+                </form>
+            </div>     
+        </div>
+        <p>Alternatively, a modal popup can be triggered when a user scrolls the document a certain percentage. This allows you to present modal popups only to users who seem to be engaged in your content.  To trigger your modal in this way, add the following line to the &lt;head> of your document: <span class="caption">&lt;style>:root{--modal-trigger: 50;}&lt;/style></span> Where the value of the --modal-trigger variable is set to the scroll percentage at which you want to trigger the modal popup.</p>
+        <p>And of course, we can also launch an "exit-intent" modal popup when we detect that our user is attempting to leave our page.  For this functionality, add this line to the &lt;head> of your html document: <span class="caption">&lt;style>:root{--exit-intent: 1;}&lt;/style></span> TODO: Exit intent popups are not working in Firefox or on mobile devices.</p>
+        <p>The latter 2 methods will check for the existence of a sessionStorage variable indicating the modal popup has been seen before displaying it.   If the variable is not set, it will be set before the modal popup is displayed, and any further popup triggers will be ignored for the duration of the session.  If you're using the modal for something like adding users to an email list, it is a good idea to provide an obvious route to this functionality elsewhere within your document, in case the user inadvertently closes the dialog without meaning to so you don't lose the conversion.</p>
+    </div>
+    <script type="text/javascript" src="js/flux.min.js"></script>
+</body>
+</html>
