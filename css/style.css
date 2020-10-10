@@ -220,7 +220,7 @@ a.splash-button {
 	align-content: center;
 	justify-content: center;
 	flex-direction: column;
-	height: 100vh;
+	height: 118vh;
 	color: var(--on-secondary);
 	background-color: var(--secondary-light);
     font-size: 48px;
