@@ -41,6 +41,7 @@
 		<meta name="msapplication-square310x310logo" content="https://www.techadvisr.com/favicons/mstile-310x310.png" />
         <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet">
         <script src="https://www.techadvisr.com/js/lazysizes.min.js"></script>
+        <style>:root{--modal-trigger: 50;}</style>
 	</head>
     <body>
         <div class="header">
@@ -135,6 +136,51 @@
 				</div>
 			</footer>
 		</div>
-        <script src="https://www.techadvisr.com/js/flux.min.js"></script>     
+        <div class="modal">
+            <div class="modal-content">
+                <div class="modal-close">X</div>
+                <span class="modal-headline">Our Strategies Grow Businesses!</span>
+                <p class="caption">Tech Tips, News, Reviews & Exclusive Promotions for Preferred Customers delivered right to your inbox!</p>
+                <form>
+                    <div class="text-input-container">
+                        <input class="text-input" type="text" name="firstName">
+                        <label for="firstName">First Name</label>
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
+                    <div class="text-input-container">
+                        <input class="text-input" type="text" name="lastName">
+                        <label>E-mail Address</label>
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
+                    <div class="text-input-container">
+                        <input class="text-input" type="text" required name="email">
+                        <label for="email">E-mail Address</label>
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
+                    <button type="submit" class="modal-button primary button">Sign Up</button>
+                </form>
+            </div>
+        </div>
+        <script src="https://www.techadvisr.com/js/flux.min.js"></script>
+        <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+        <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+        <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyk9VfgAM9edWDrFzgeKMDOz10bsPDrel8sB11AjB57XnrGk2A/exec'
+            const form = document.forms['submit-to-google-sheet']
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
     </body>
 </html>
