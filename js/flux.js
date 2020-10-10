@@ -24,9 +24,11 @@ function showModal() {
 }
 
 modalReveal = document.querySelector('.modal-reveal');
-modalReveal.addEventListener('click', function() {
-    modal.style.display = 'block';
-});
+if(modalReveal){
+    modalReveal.addEventListener('click', function() {
+        modal.style.display = 'block';
+    });
+}
 
 document.addEventListener("click", (evt) => {
     let targetElement = evt.target; // clicked element
@@ -42,19 +44,22 @@ document.addEventListener("click", (evt) => {
 });
 
 modalClose = document.querySelector('.modal-close');
-modalClose.addEventListener('click', function() {
-    modal.style.display = 'none';
-});
 
-document.onscroll = function(){ 
-  var pos = getVerticalScrollPercentage(document.body)
-  var modalTrigger = getComputedStyle(document.documentElement).getPropertyValue('--modal-trigger').trim();
-    if (modalTrigger) {
-      if (pos > modalTrigger) {
-          showModal();
-      }
-    }
-};
+if(modalClose) {
+    modalClose.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    document.onscroll = function(){ 
+      var pos = getVerticalScrollPercentage(document.body)
+      var modalTrigger = getComputedStyle(document.documentElement).getPropertyValue('--modal-trigger').trim();
+        if (modalTrigger) {
+          if (pos > modalTrigger) {
+              showModal();
+          }
+        }
+    };
+}
 
 function getVerticalScrollPercentage( elm ){
     var p = elm.parentNode,
