@@ -26,7 +26,7 @@ function showModal() {
 modalReveal = document.querySelector('.modal-reveal');
 if(modalReveal){
     modalReveal.addEventListener('click', function() {
-        modal.style.visbility = 'visible';
+        modal.style.visibility = 'visible';
     });
 }
 

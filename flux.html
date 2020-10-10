@@ -426,5 +426,22 @@
         <p>And of course, we can also launch an "exit-intent" modal popup when we detect that our user is attempting to leave our page.  For this functionality, add this line to the &lt;head> of your html document: <span class="caption">&lt;style>:root{--exit-intent: 1;}&lt;/style></span> TODO: Exit intent popups are not working in Firefox or on mobile devices.</p>
         <p>The latter 2 methods will check for the existence of a sessionStorage variable indicating the modal popup has been seen before displaying it.   If the variable is not set, it will be set before the modal popup is displayed, and any further popup triggers will be ignored for the duration of the session.  If you're using the modal for something like adding users to an email list, it is a good idea to provide an obvious route to this functionality elsewhere within your document, in case the user inadvertently closes the dialog without meaning to so you don't lose the conversion.</p>
     </div>
+    <div class="modal">
+    <div class="modal-content">
+        <div class="modal-close">X</div>
+        <span class="modal-headline">Our Strategies Grow Businesses!</span>
+        <p class="caption">Tech Tips, News, Reviews & Exclusive Promotions for Preferred Customers delivered right to your inbox!</p>
+        <form>
+            <div class="text-input-container">
+                <input class="text-input" type="text">
+                <label>E-mail Address</label>
+                <span class="focus-border">
+                    <i></i>
+                </span>
+            </div>
+            <button type="submit" class="modal-button primary button">Submit</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>
