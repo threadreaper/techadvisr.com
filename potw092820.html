@@ -16,7 +16,7 @@
 		<meta property="og:description" content="Techadvisr's Open Source Pick of the Week for 9-28-2020 - Brave Browser is private, fast and secure. What's not to love?" />
 		<meta property="og:image" content="https://www.techadvisr.com/images/brave.webp" />
 		<meta property="twitter:card" content="summary_large_image" />
-		<link href="https://www.techadvisr.com/css/flux.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://www.techadvisr.com/css/flux.css" rel="stylesheet" type="text/css" />
 		<link href="https://www.techadvisr.com/css/style.min.css" rel="stylesheet" type="text/css" />
 		<link rel=icon href="https://www.techadvisr.com/favicons/favicon.ico" />
 		<link rel="apple-touch-icon" sizes="57x57" href="https://www.techadvisr.com/favicons/apple-touch-icon-57x57.png" />
@@ -136,28 +136,28 @@
 				</div>
 			</footer>
 		</div>
-        <div class="modal">
+        <div class="modal" style="display: hidden;">
             <div class="modal-content">
                 <div class="modal-close">X</div>
                 <span class="modal-headline">Our Strategies Grow Businesses!</span>
                 <p class="caption">Tech Tips, News, Reviews & Exclusive Promotions for Preferred Customers delivered right to your inbox!</p>
-                <form>
+                <form name="submit-form-to-google-sheets">
                     <div class="text-input-container">
-                        <input class="text-input" type="text" name="firstName">
+                        <input class="text-input" type="text" id="firstName" name="chromeSucks">
                         <label for="firstName">First Name</label>
                         <span class="focus-border">
                             <i></i>
                         </span>
                     </div>
                     <div class="text-input-container">
-                        <input class="text-input" type="text" name="lastName">
-                        <label>E-mail Address</label>
+                        <input class="text-input" type="text" id="lastName" name="autoCompleteHack">
+                        <label>Last Name</label>
                         <span class="focus-border">
                             <i></i>
                         </span>
                     </div>
                     <div class="text-input-container">
-                        <input class="text-input" type="text" required name="email">
+                        <input class="text-input" type="email" required aria-required=”true” id="email" name="damnYouChrome">
                         <label for="email">E-mail Address</label>
                         <span class="focus-border">
                             <i></i>
@@ -173,14 +173,31 @@
         <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
         <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbyk9VfgAM9edWDrFzgeKMDOz10bsPDrel8sB11AjB57XnrGk2A/exec'
-            const form = document.forms['submit-to-google-sheet']
+            const form = document.forms['submit-form-to-google-sheets']
+            
+            function getRandom() {
+                return Math.random().toString(36).substr(2, 5);
+            }
+            
+            window.onload = function() {
+                var textInputs, i;
+                textInputs = document.querySelectorAll('.text-input');
 
+                for (i = 0; i < textInputs.length; i += 1) {
+                    textInputs[i].setAttribute('autocomplete', getRandom());
+                }
+            }
+            
             form.addEventListener('submit', e => {
                 e.preventDefault()
                 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => console.log('Success!', response))
+                .then(response => modal.innerHTML = '<div class="modal-content" style="height: 372px;"><span class="modal-headline">Thanks for your interest!  We\'ll be in touch!</div>')
                 .catch(error => console.error('Error!', error.message))
-            })
+                
+                window.setTimeout(function() {
+                    modal.style.display = 'none';
+                }, 3000);
+            });
         </script>
     </body>
 </html>
