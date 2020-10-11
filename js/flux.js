@@ -10,6 +10,18 @@ function classToggle() {
         }
     }
 }
+var sliders;
+sliders = document.querySelectorAll('.slider');
+
+for (i = 0; i < sliders.length; i += 1) {
+    sliders[i].addEventListener('click', function() {
+        if (this.value == 0) {
+            this.value = 1;
+        } else {
+            this.value = 0;
+        }
+    });
+}
 
 var modal, modalButton, modalClose;
 var modal = document.querySelector('.modal');

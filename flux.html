@@ -138,7 +138,7 @@
             </div>
         </div>
         <div class="wrapper">
-            <a href="#" class="primary button">Link</a>
+            <a href="#" class="primary button effect twirl-left data-effect='Link'">Link</a>
             <button class="primary button">Button</button>
             <a href="#" class="secondary button">Link</a>
             <button class="secondary button">Button</button>
@@ -189,12 +189,12 @@
         <input type="checkbox" checked>
         <span class="checkmark"></span>
     </label>
-        <label class="radio">Radio Button
-        <input type="radio" checked="checked" name="radio">
+    <label class="radio">Radio Button
+        <input type="radio" name="radio">
         <span class="radiomark"></span>
     </label>
-    <label class="toggle">Toggle
-        <input type="range" min=0 max=1>
+    <label class="slider-label">Toggle
+        <input class="slider" type="range" min=0 max=1 />
     </label>
 </div>
 <div class="wrapper-offset-primary">
@@ -202,12 +202,12 @@
         <input type="checkbox" checked>
         <span class="checkmark"></span>
     </label>
-        <label class="radio">Radio Button
-        <input type="radio" checked="checked" name="radio">
+    <label class="radio">Radio Button
+        <input type="radio" name="radio">
         <span class="radiomark"></span>
     </label>
-    <label class="toggle">Toggle
-        <input type="range" min=0 max=1>
+    <label class="slider-label">Toggle
+        <input class="slider" type="range" min=0 max=1 />
     </label>
 </div>
 <div class="wrapper-offset-secondary">
@@ -215,12 +215,12 @@
         <input type="checkbox" checked>
         <span class="checkmark"></span>
     </label>
-        <label class="radio">Radio Button
+    <label class="radio">Radio Button
         <input type="radio" checked="checked" name="radio">
         <span class="radiomark"></span>
     </label>
-    <label class="toggle">Toggle
-        <input type="range" min=0 max=1>
+    <label class="slider-label">Toggle
+        <input class="slider" type="range" min=0 max=1 />
     </label>
 </div>
 <div class="wrapper">
@@ -441,6 +441,7 @@
             </div>
             <button type="submit" class="modal-button primary button">Submit</button>
         </form>
+        <script src="js/flux.js"></script>
     </div>
 </div>
 </body>
