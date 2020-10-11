@@ -76,16 +76,16 @@ h6 {
 
 :root {
 	--primary: #00ff00;
-	--primary-light: #65ff4d;
+	--primary-light: var(--primary-dark);
 	--primary-dark: #00a100;
 	--secondary: #222222;
 	--secondary-light: #696969;
-	--secondary-dark: #000000;
-    --secondary-highlight: #aaaaaa;
-	--neutral: #f2f2f2;
+	--secondary-dark: var(--secondary-dark)000;
+	--secondary-highlight: #aaaaaa;
+	--neutral: var(--neutral);
 	--neutral-offset: #ccc;
 	--on-primary: #222222;
-	--on-secondary: #f2f2f2;
+	--on-secondary: var(--neutral);
 	--on-neutral: #222222;
 	--font-family-1: "Montserrat";
 	--font-family-2: "Lato";
@@ -110,31 +110,33 @@ body {
 
 body::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-	background-color: #666;
+	-moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+	background-color: var(--secondary-light);
 	border-radius: 10px;
 }
 
 body::-webkit-scrollbar {
 	width: 12px;
-	background-color: #333;
+	background-color: var(--secondary);
 }
 
 body::-webkit-scrollbar-thumb {
 	border-radius: 10px;
 	background-color: #FFF;
-	background-image: -webkit-gradient(linear, 40% 0%, 75% 84%, from(#00d400), to(#00d400), color-stop(.6, #54DE5D));
-	box-shadow: inset 1px 1px 3px rgba(66, 66, 66, 0.7), 2px 2px 5px #000;
+	background-image: -webkit-gradient(linear, 40% 0%, 75% 84%, from(var(--primary)), to(var(--primary)), color-stop(.6, var(--primary-dark)));
+	box-shadow: inset 1px 1px 3px var(--secondary-light), 2px 2px 5px var(--secondary-dark);
 }
 
 p {
 	font: 350 1rem var(--font-family-2);
 	letter-spacing: 0.25px;
-    line-height: 22px;
+	line-height: 22px;
 	margin: 10px;
 }
 
 a {
-    color: inherit;
+	color: inherit;
 }
 
 .icon {
@@ -143,8 +145,8 @@ a {
 }
 
 .icon-1x {
-    height: 1rem;
-    width: 1rem;
+	height: 1rem;
+	width: 1rem;
 }
 
 .icon-2x {
@@ -153,77 +155,73 @@ a {
 }
 
 .icon-3x {
-    height: 2rem;
-    width: 2rem;
+	height: 2rem;
+	width: 2rem;
 }
 
 .icon-4x {
-    height: 2.5rem;
-    width: 2.5rem;
+	height: 2.5rem;
+	width: 2.5rem;
 }
 
 .icon-5x {
-    height: 3rem;
-    width: 3rem;
+	height: 3rem;
+	width: 3rem;
 }
 
 .icon-6x {
-    height: 3.5rem;
-    width: 3.5rem;
+	height: 3.5rem;
+	width: 3.5rem;
 }
 
 .icon-7x {
-    height: 4rem;
-    width: 4rem;
+	height: 4rem;
+	width: 4rem;
 }
 
 .icon-8x {
-    height: 4.5rem;
-    width: 4.5rem;
+	height: 4.5rem;
+	width: 4.5rem;
 }
-
-
 
 .primary {
 	background: linear-gradient(to bottom right, var(--primary-light), var(--primary));
 	border: 1px solid var(--secondary);
 	padding: 9px;
 	border-radius: 6px;
-    color: var(--secondary);
+	color: var(--secondary);
 	margin: 10px;
 	min-height: 48px;
-    box-shadow: 2px 2px 3px var(--secondary-light), 0 7px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
+	box-shadow: 2px 2px 3px var(--secondary-light), 0 7px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
 }
 
 .primary:active {
-		border: 1px solid var(--secondary);
-		padding: 9px;	
-		box-shadow: inset 2px 2px 5px var(--secondary-light), 0 5px rgba(0, 0, 0, 0.25) inset;
+	border: 1px solid var(--secondary);
+	padding: 9px;
+	box-shadow: inset 2px 2px 5px var(--secondary-light), 0 5px rgba(0, 0, 0, 0.25) inset;
 }
-
-
 
 .secondary {
 	background: linear-gradient(to bottom right, var(--neutral-offset), var(--secondary-light));
 	border: 1px solid var(--secondary);
 	padding: 9px;
 	border-radius: 6px;
-    color: var(--secondary-dark);
+	color: var(--secondary-dark);
 	margin: 10px;
 	min-height: 48px;
-    box-shadow: 2px 2px 3px var(--secondary-light), 0 7px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
+	box-shadow: 2px 2px 3px var(--secondary-light), 0 7px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
 }
 
 .secondary:active {
-    border: 1px solid var(--secondary);
-    padding: 9px;	
-    box-shadow: inset 2px 2px 5px var(--secondary-light), 0 5px rgba(0, 0, 0, 0.25) inset;
+	border: 1px solid var(--secondary);
+	padding: 9px;
+	box-shadow: inset 2px 2px 5px var(--secondary-light), 0 5px rgba(0, 0, 0, 0.25) inset;
 }
 
 @media screen and (min-width: 992px) {
 	.secondary:hover {
 		border: 1px solid var(--secondary);
-		padding: 9px;	
+		padding: 9px;
 		box-shadow: inset 2px 2px 5px var(--secondary-light);
 	}
 }
@@ -235,28 +233,28 @@ a {
 	border-radius: 6px;
 	margin: 10px;
 	min-height: 48px;
-    box-shadow: 2px 2px 3px var(--secondary-light), 0 7px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
+	box-shadow: 2px 2px 3px var(--secondary-light), 0 7px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
 }
 
 .neutral:active {
-    border: 1px solid var(--secondary);
-    padding: 9px;	
-    box-shadow: inset 2px 2px 5px var(--secondary-light), 0 5px rgba(0, 0, 0, 0.25) inset;
+	border: 1px solid var(--secondary);
+	padding: 9px;
+	box-shadow: inset 2px 2px 5px var(--secondary-light), 0 5px rgba(0, 0, 0, 0.25) inset;
 }
 
 @media screen and (min-width: 992px) {
 	.neutral:hover {
 		border: 1px solid var(--secondary);
-		padding: 9px;	
+		padding: 9px;
 		box-shadow: inset 2px 2px 5px var(--secondary-light);
 	}
 }
 
 a.button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .wrapper {
@@ -267,23 +265,23 @@ a.button {
 	height: auto;
 	justify-content: space-around;
 	color: var(--on-neutral);
-    padding-top: 10px;
-    padding-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .wrapper a.primary {
-    color: var(--on-primary);
-    text-decoration: none;
+	color: var(--on-primary);
+	text-decoration: none;
 }
 
 .wrapper a.secondary {
-    color: var(--secondary-dark);
-    text-decoration: none;
+	color: var(--secondary-dark);
+	text-decoration: none;
 }
 
 .wrapper a.neutral {
-    color: var(--on-neutral);
-    text-decoration: none;
+	color: var(--on-neutral);
+	text-decoration: none;
 }
 
 .wrapper-offset-secondary {
@@ -295,8 +293,8 @@ a.button {
 	height: auto;
 	justify-content: space-around;
 	color: var(--on-secondary);
-    padding-top: 10px;
-    padding-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .wrapper-offset-primary {
@@ -308,26 +306,24 @@ a.button {
 	height: auto;
 	justify-content: space-around;
 	color: var(--secondary);
-    padding-top: 10px;
-    padding-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .wrapper-offset-primary a {
-    color: var(--secondary-light);
+	color: var(--secondary-light);
 }
 
 .wrapper-offset-secondary a:active {
-    color: var(--secondary-dark);
+	color: var(--secondary-dark);
 }
 
-@media screen and (min-width: 992px) {
-
-}
+@media screen and (min-width: 992px) {}
 
 .checkbox {
-    position: relative;
-    padding-left: 50px;
-    cursor: pointer;
+	position: relative;
+	padding-left: 50px;
+	cursor: pointer;
 	font: 17px var(--font-family-2);
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -349,20 +345,20 @@ a.button {
 	top: -10px;
 	left: 0;
 	border-radius: 6px;
-    background: -webkit-linear-gradient(top, #00d400 0%,#00a100 61%,#00d400 91%,#65ff4d 100%);
+	background: -webkit-linear-gradient(top, var(--primary) 0%, var(--primary-light) 61%, var(--primary) 91%, var(--primary-dark) 100%);
 	height: 39px;
 	width: 39px;
-    border: 2px outset var(--neutral-offset);
-    box-shadow: 3px 3px 6px 4px var(--secondary-light), inset 4px 8px 5px #000, inset -1px 0px 3px #666;
+	border: 2px outset var(--neutral-offset);
+	box-shadow: 3px 3px 6px 4px var(--secondary-light), inset 4px 8px 5px var(--secondary-dark), inset -1px0 3px var(--secondary-light);
 }
 
 .wrapper-offset-primary .checkmark {
-    box-shadow: 4px 4px 6px 4px var(--primary-dark), -3px -3px 5px var(--neutral), inset 4px 8px 5px #000, inset -1px 0px 3px #666;
+	box-shadow: 4px 4px 6px 4px var(--primary-dark), -3px -3px 5px var(--neutral), inset 4px 8px 5px var(--secondary-dark), inset -1px0 3px var(--secondary-light);
 }
 
 .wrapper-offset-secondary .checkmark {
-    border: 2px outset var(--secondary-highlight);
-    box-shadow: 4px 4px 6px 4px var(--secondary), -2px -2px 5px var(--neutral-offset), inset 4px 8px 5px var(--secondary-dark), inset -1px 0px 3px #666;
+	border: 2px outset var(--secondary-highlight);
+	box-shadow: 4px 4px 6px 4px var(--secondary), -2px -2px 5px var(--neutral-offset), inset 4px 8px 5px var(--secondary-dark), inset -1px0 3px var(--secondary-light);
 }
 
 .checkmark:after {
@@ -376,28 +372,28 @@ a.button {
 }
 
 .checkbox .checkmark:after {
-    left: 16px;
-    top: -7px;
+	left: 16px;
+	top: -7px;
 	width: 10px;
 	height: 25px;
 	border: solid red;
-    box-shadow: 5px 5px 4px var(--secondary-dark);
+	box-shadow: 5px 5px 4px var(--secondary-dark);
 	border-width: 0 6px 6px 0;
 	-webkit-transform: rotate(40deg);
 	-ms-transform: rotate(40deg);
-	transform: rotate(40deg);  
+	-moz-transform: rotate(40deg);
+	transform: rotate(40deg);
 }
 
 .radio {
 	position: relative;
-    padding-left: 50px;
+	padding-left: 50px;
 	cursor: pointer;
 	font: 17px var(--font-family-2);
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-
 }
 
 .wrapper-offset-secondary .radio {
@@ -408,39 +404,36 @@ a.button {
 	position: absolute;
 	opacity: 0;
 	cursor: pointer;
-
 }
 
 .radiomark {
 	position: absolute;
-    top: -10px;
-    left: 0;
+	top: -10px;
+	left: 0;
 	height: 39px;
 	width: 39px;
-    background: -webkit-linear-gradient(top, #00d400 0%,#00a100 61%,#00d400 91%,#65ff4d 100%);
+	background: -webkit-linear-gradient(top, var(--primary) 0%, var(--primary-light)61%, var(--primary) 91%, var(--primary-dark) 100%);
 	border-radius: 50%;
-    border: 2px outset var(--neutral-offset);
-    box-shadow: 3px 3px 6px 4px var(--secondary-light), inset 4px 8px 5px #000, inset -1px 0px 3px #666;
+	border: 2px outset var(--neutral-offset);
+	box-shadow: 3px 3px 6px 4px var(--secondary-light), inset 4px 8px 5px var(--secondary-dark), inset -1px0 3px var(--secondary-light);
 }
 
 .wrapper-offset-primary .radiomark {
-    box-shadow: 3px 3px 6px 4px var(--primary-dark), -1px -1px 3px 3px var(--neutral-offset), inset 4px 8px 5px #000, inset -1px 0px 3px #666;
+	box-shadow: 3px 3px 6px 4px var(--primary-dark), -1px -1px 3px 3px var(--neutral-offset), inset 4px 8px 5px var(--secondary-dark), inset -1px0 3px var(--secondary-light);
 }
 
 .wrapper-offset-secondary .radiomark {
-    border: 2px outset var(--secondary-highlight);
-    box-shadow: 4px 4px 8px 5px var(--secondary), -1px -1px 4px 3px var(--neutral-offset), inset 4px 8px 5px #000, inset -1px 0px 3px #666;
+	border: 2px outset var(--secondary-highlight);
+	box-shadow: 4px 4px 8px 5px var(--secondary), -1px -1px 4px 3px var(--neutral-offset), inset 4px 8px 5px var(--secondary-dark), inset -1px0 3px var(--secondary-light);
 }
 
-.radiomark:before,
-.radiomark:after {
+.radiomark:before, .radiomark:after {
 	content: "";
 	position: absolute;
 	display: none;
 }
 
-.radio input:checked~.radiomark:before,
-.radio input:checked~.radiomark:after {
+.radio input:checked~.radiomark:before, .radio input:checked~.radiomark:after {
 	display: block;
 }
 
@@ -450,29 +443,30 @@ a.button {
 	width: 25px;
 	height: 25px;
 	border-radius: 50%;
-    background: -webkit-linear-gradient(top left, var(--neutral-offset) 0%, var(--secondary-light) 100%);
-    box-shadow: inset 2px 3px #f2f2f2, inset -3px -3px 3px #666, 3px 3px 3px  var(--secondary-dark);
+	background: -webkit-linear-gradient(top left, var(--neutral-offset) 0%, var(--secondary-light) 100%);
+	box-shadow: inset 2px 3px var(--neutral), inset -3px -3px 3px var(--secondary-light), 3px 3px 3px var(--secondary-dark);
 }
 
 .radio .radiomark:after {
-    left: 16px;
-    top: -7px;
+	left: 16px;
+	top: -7px;
 	width: 10px;
 	height: 25px;
 	border: solid red;
-    box-shadow: 4px 4px 4px var(--secondary-dark);
+	box-shadow: 4px 4px 4px var(--secondary-dark);
 	border-width: 0 5px 5px 0;
+	-moz-transform: rotate(40deg);
 	-webkit-transform: rotate(40deg);
 	-ms-transform: rotate(40deg);
-	transform: rotate(40deg);    
+	transform: rotate(40deg);
 }
 
 .text-input-container {
 	width: 100%;
 	margin: 3%;
-    margin-left: 0;
+	margin-left: 0;
 	position: relative;
-    margin-top: 20px;
+	margin-top: 20px;
 }
 
 .text-input {
@@ -490,7 +484,7 @@ a.button {
 .text-input-container textarea {
 	width: 97%;
 	margin-right: 0;
-    resize: none;
+	resize: none;
 }
 
 @media screen and (min-width: 992px) {
@@ -506,8 +500,7 @@ a.button {
 	}
 }
 
-.text-input~.focus-border:before,
-.text-input~.focus-border:after {
+.text-input~.focus-border:before, .text-input~.focus-border:after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -530,13 +523,11 @@ a.button {
 	left: auto;
 }
 
-.text-input-container textarea:focus~.focus-border:before,
-.text-input-container textarea:focus~.focus-border:after {
+.text-input-container textarea:focus~.focus-border:before, .text-input-container textarea:focus~.focus-border:after {
 	width: 97%;
 }
 
-.text-input~.focus-border i:before,
-.text-input~.focus-border i:after {
+.text-input~.focus-border i:before, .text-input~.focus-border i:after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -558,18 +549,12 @@ a.button {
 	right: auto;
 }
 
-.text-input:focus~.focus-border:before,
-.text-input:focus~.focus-border:after,
-.has-content.text-input~.focus-border:before,
-.has-content.text-input~.focus-border:after {
+.text-input:focus~.focus-border:before, .text-input:focus~.focus-border:after, .has-content.text-input~.focus-border:before, .has-content.text-input~.focus-border:after {
 	width: 100%;
 	transition: 0.5s;
 }
 
-.text-input:focus~.focus-border i:before,
-.text-input:focus~.focus-border i:after,
-.has-content.text-input~.focus-border i:before,
-.has-content.text-input~.focus-border i:after {
+.text-input:focus~.focus-border i:before, .text-input:focus~.focus-border i:after, .has-content.text-input~.focus-border i:before, .has-content.text-input~.focus-border i:after {
 	height: 100%;
 	transition: 0.5s;
 }
@@ -585,8 +570,7 @@ a.button {
 	font: 400 15px 'Lato';
 }
 
-.text-input:focus~label,
-.has-content.text-input~label {
+.text-input:focus~label, .has-content.text-input~label {
 	top: -18px;
 	left: 0;
 	font: 600 12px 'Lato';
@@ -596,8 +580,7 @@ a.button {
 	transition: 0.5s;
 }
 
-.wrapper-offset-secondary .text-input:focus~label,
-.wrapper-offset-secondary .has-content.text-input~label {
+.wrapper-offset-secondary .text-input:focus~label, .wrapper-offset-secondary .has-content.text-input~label {
 	color: var(--primary);
 }
 
@@ -612,7 +595,7 @@ a.button {
 
 .card-top {
 	min-height: 37px;
-    height: auto;
+	height: auto;
 	font: 17px var(--font-family-2);
 	padding: 10px;
 }
@@ -634,188 +617,189 @@ a.button {
 		text-align: justify;
 	}
 }
+
 .modal-content {
-    border-radius: 6px;
-    border: 2px solid var(--secondary-light);
-    padding: 25px;
-    padding-bottom: 35px;
-    width: 220px;
-    position: relative;
-    background: var(--neutral);
-    color: var(--on-neutral);
-    box-shadow: inset 2px 2px 3px var(--secondary-light);
-    z-index: -2;
+	border-radius: 6px;
+	border: 2px solid var(--secondary-light);
+	padding: 25px;
+	padding-bottom: 35px;
+	width: 220px;
+	position: relative;
+	background: var(--neutral);
+	color: var(--on-neutral);
+	box-shadow: inset 2px 2px 3px var(--secondary-light);
+	z-index: -2;
 }
 
 .modal-close {
-    border: 1px solid var(--secondary);
-    background: var(--primary);
-    border-radius: 100%;
-    width: 40px;
-    height: 40px;
-    padding-left: 13px;
-    padding-top: 6px;
-    font-size: 20px;
-    position: absolute;
-    top: -21px;
-    right: -21px;
-    text-shadow: 0 -1px 2px var(--neutral), 1px 1px 2px var(--primary-dark);
-    box-shadow: 1px 1px 2px var(--secondary-light), 0 5px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
-    cursor: pointer;
+	border: 1px solid var(--secondary);
+	background: var(--primary);
+	border-radius: 100%;
+	width: 40px;
+	height: 40px;
+	padding-left: 13px;
+	padding-top: 6px;
+	font-size: 20px;
+	position: absolute;
+	top: -21px;
+	right: -21px;
+	text-shadow: 0 -1px 2px var(--neutral), 1px 1px 2px var(--primary-dark);
+	box-shadow: 1px 1px 2px var(--secondary-light), 0 5px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
+	cursor: pointer;
 }
 
 .modal-close:active {
-    text-shadow: 0 -1px 2px var(--neutral), 1px 1px 2px var(--primary-dark);
-    box-shadow: 1px 1px 2px var(--secondary-light), 0 2px rgba(0, 0, 0, 0.3) inset;
+	text-shadow: 0 -1px 2px var(--neutral), 1px 1px 2px var(--primary-dark);
+	box-shadow: 1px 1px 2px var(--secondary-light), 0 2px rgba(0, 0, 0, 0.3) inset;
 }
 
 .modal-headline {
-    font: 900 20px var(--font-family-1);
+	font: 900 20px var(--font-family-1);
 }
 
 .modal {
-    background: var(--neutral);
-    padding: 5px;
-    box-shadow: 2px 2px 3px var(--secondary);
-    border-radius: 6px;
-    border: 1px solid var(--secondary-light);
-    position: fixed;
-    z-index: 5;
-    right: 30px;
-    bottom: 200px;
-    visibility: hidden;
+	background: var(--neutral);
+	padding: 5px;
+	box-shadow: 2px 2px 3px var(--secondary);
+	border-radius: 6px;
+	border: 1px solid var(--secondary-light);
+	position: fixed;
+	z-index: 5;
+	right: 30px;
+	bottom: 200px;
+	visibility: hidden;
 }
 
 .modal-button {
-    width: 100%;
-    margin: 10px;
-    margin-left: auto;
-    margin-right: auto;
+	width: 100%;
+	margin: 10px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .slider-label {
-    position: relative;
-    left: 100px;
-    top: -10px;
-    	font: 17px var(--font-family-2);
+	position: relative;
+	left: 100px;
+	top: -10px;
+	font: 17px var(--font-family-2);
 }
 
-
 input[type=range].slider {
-  width: 98px;
-  height: 40px;
-  background: var(--neutral);
-  border-radius: 34px;
-  box-shadow: 4px 4px 8px 5px var(--secondary-light);
-  border: 2px outset var(--neutral-offset);
-  position: relative;
-  left: -170px;
-    top: 10px;
-  -webkit-appearance: none;
+	width: 98px;
+	height: 40px;
+	background: var(--neutral);
+	border-radius: 34px;
+	box-shadow: 4px 4px 8px 5px var(--secondary-light);
+	border: 2px outset var(--neutral-offset);
+	position: relative;
+	left: -170px;
+	top: 10px;
+	-webkit-appearance: none;
 }
 
 .wrapper-offset-primary input[type=range].slider {
-    box-shadow: 4px 4px 8px 5px var(--primary-dark), -2px -2px 4px 4px var(--neutral-offset);
+	box-shadow: 4px 4px 8px 5px var(--primary-dark), -2px -2px 4px 4px var(--neutral-offset);
 }
 
 .wrapper-offset-secondary input[type=range].slider {
-    border: 2px outset var(--secondary-highlight);
-    box-shadow: 4px 4px 8px 5px var(--secondary), -1px -1px 4px 3px var(--neutral-offset);
+	border: 2px outset var(--secondary-highlight);
+	box-shadow: 4px 4px 8px 5px var(--secondary), -1px -1px 4px 3px var(--neutral-offset);
 }
 
 .slider:focus {
-    outline: none;
+	outline: none;
 }
 
 input[type=range].slider::-webkit-slider-runnable-track {
-  height: 39px;
-  border-radius: 26px;
-  background: -webkit-linear-gradient(top, #00d400 0%,#00a100 61%,#00d400 91%,#65ff4d 100%);
-  box-shadow: inset 0 8px 14px #000, inset -1px 0px 3px #666;
-  border: 2px inset #f2f2f2;
-  top: 4px;
-  left: 4px;
+	height: 39px;
+	border-radius: 26px;
+	background: -webkit-linear-gradient(top, var(--primary) 0%, var(--primary-light)61%, var(--primary) 91%, var(--primary-dark) 100%);
+	box-shadow: inset 0 8px 14px var(--secondary-dark), inset -1px0 3px var(--secondary-light);
+	border: 2px inset var(--neutral);
+	top: 4px;
+	left: 4px;
 }
 
 input[type=range].slider::-webkit-slider-thumb {
-  width: 60px;
-  height: 34px;
-  background: -webkit-linear-gradient(top left, #f2f2f2 0%, #666 100%);
-  border-radius: 24px;
-  border: 1px solid #666;
-  cursor: pointer;
-  -webkit-appearance: none;
-  box-shadow: inset 4px 4px #f2f2f2, inset -3px -3px 3px #666, 0 2px 3px  #222;
+	width: 60px;
+	height: 34px;
+	background: -webkit-linear-gradient(top left, var(--neutral) 0%, var(--secondary-light) 100%);
+	border-radius: 24px;
+	border: 1px solid var(--secondary-light);
+	cursor: pointer;
+	-webkit-appearance: none;
+	box-shadow: inset 4px 4px var(--neutral), inset -3px -3px 3px var(--secondary-light), 0 2px 3px #222;
 }
 
 input[type=range].slider::-moz-range-track {
-  width: 90px;
-  height: 40px;
-  border-radius: 26px;
-  background: -webkit-linear-gradient(top, #00d400 0%,#00a100 61%,#00d400 91%,#65ff4d 100%);
-  box-shadow: inset 0 8px 14px #000, inset -1px 0px 3px #666;
-  border: 2px inset #f2f2f2;
-  top: 4px;
-  left: 4px;
+	width: 90px;
+	height: 40px;
+	border-radius: 26px;
+	background: -webkit-linear-gradient(top, var(--primary) 0%, var(--primary-light)61%, var(--primary) 91%, var(--primary-dark) 100%);
+	box-shadow: inset 0 8px 14px var(--secondary-dark), inset -1px0 3px var(--secondary-light);
+	border: 2px inset var(--neutral);
+	top: 4px;
+	left: 4px;
 }
 
 input[type=range].slider::-moz-range-thumb {
-  width: 60px;
-  height: 34px;
-  background: -webkit-linear-gradient(top left, #f2f2f2 0%, #666 100%);
-  border-radius: 24px;
-  border: 1px solid #666;
-  cursor: pointer;
-  -webkit-appearance: none;
-  box-shadow: inset 4px 4px #f2f2f2, inset -3px -3px 3px #666, 0 2px 3px  #222;
+	width: 60px;
+	height: 34px;
+	background: -webkit-linear-gradient(top left, var(--neutral) 0%, var(--secondary-light) 100%);
+	border-radius: 24px;
+	border: 1px solid var(--secondary-light);
+	cursor: pointer;
+	-webkit-appearance: none;
+	box-shadow: inset 4px 4px var(--neutral), inset -3px -3px 3px var(--secondary-light), 0 2px 3px #222;
 }
 
 input[type=range].slider::-ms-track {
-  width: 90px;
-  height: 40px;
-  border-radius: 26px;
-  background: -webkit-linear-gradient(top, #00d400 0%,#00a100 61%,#00d400 91%,#65ff4d 100%);
-  box-shadow: inset 0 8px 14px #000, inset -1px 0px 3px #666;
-  border: 2px inset #f2f2f2;
-  top: 4px;
-  left: 4px;
+	width: 90px;
+	height: 40px;
+	border-radius: 26px;
+	background: -webkit-linear-gradient(top, var(--primary) 0%, var(--primary-light)61%, var(--primary) 91%, var(--primary-dark) 100%);
+	box-shadow: inset 0 8px 14px var(--secondary-dark), inset -1px0 3px var(--secondary-light);
+	border: 2px inset var(--neutral);
+	top: 4px;
+	left: 4px;
 }
 
 input[type=range].slider::-ms-fill-lower {
-  background: transparent;
+	background: transparent;
 }
 
 input[type=range].slider::-ms-fill-upper {
-  background: transparent;
+	background: transparent;
 }
+
 input[type=range].slider::-ms-thumb {
-  width: 60px;
-  height: 34px;
-  background: -webkit-linear-gradient(top left, #f2f2f2 0%, #666 100%);
-  border-radius: 24px;
-  border: 1px solid #666;
-  cursor: pointer;
-  -webkit-appearance: none;
-  box-shadow: inset 4px 4px #f2f2f2, inset -3px -3px 3px #666, 0 2px 3px  #222;
-  margin-top: 0px;
-  /*Needed to keep the Edge thumb centred*/
+	width: 60px;
+	height: 34px;
+	background: -webkit-linear-gradient(top left, var(--neutral) 0%, var(--secondary-light) 100%);
+	border-radius: 24px;
+	border: 1px solid var(--secondary-light);
+	cursor: pointer;
+	-webkit-appearance: none;
+	box-shadow: inset 4px 4px var(--neutral), inset -3px -3px 3px var(--secondary-light), 0 2px 3px #222;
+	margin-top: 0;
+	/*Needed to keep the Edge thumb centred*/
 }
 
 input[type=range].slider:focus::-ms-fill-lower {
-  background: transparent;
+	background: transparent;
 }
 
 input[type=range].slider:focus::-ms-fill-upper {
-  background: transparent;
+	background: transparent;
 }
 
 /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
 how to remove the virtical space around the range input in IE*/
-@supports (-ms-ime-align:auto) {
-  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
-  input[type=range].slider {
-    margin: 0;
-    /*Edge starts the margin from the thumb, not the track as other browsers do*/
-  }
-}
 
+@supports (-ms-ime-align:auto) {
+	/* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+	input[type=range].slider {
+		margin: 0;
+		/*Edge starts the margin from the thumb, not the track as other browsers do*/
+	}
+}

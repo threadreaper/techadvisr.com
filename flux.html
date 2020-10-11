@@ -1,448 +1,594 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel=stylesheet href="css/flux.min.css">
-    <link rel=stylesheet href="css/style.min.css">
-    <link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta charset="utf-8" />
-		<meta name="theme-color" content="#00d400" />
-    <link rel=icon href="https://www.techadvisr.com/favicons/favicon.ico" />
-		<link rel="apple-touch-icon" sizes="57x57" href="https://www.techadvisr.com/favicons/apple-touch-icon-57x57.png" />
-		<link rel="apple-touch-icon" sizes="114x114" href="https://www.techadvisr.com/favicons/apple-touch-icon-114x114.png" />
-		<link rel="apple-touch-icon" sizes="72x72" href="https://www.techadvisr.coma/favicons/pple-touch-icon-72x72.png" />
-		<link rel="apple-touch-icon" sizes="144x144" href="https://www.techadvisr.com/favicons/apple-touch-icon-144x144.png" />
-		<link rel="apple-touch-icon" sizes="60x60" href="https://www.techadvisr.com/favicons/apple-touch-icon-60x60.png" />
-		<link rel="apple-touch-icon" sizes="120x120" href="https://www.techadvisr.com/favicons/apple-touch-icon-120x120.png" />
-		<link rel="apple-touch-icon" sizes="76x76" href="https://www.techadvisr.com/favicons/apple-touch-icon-76x76.png" />
-		<link rel="apple-touch-icon" sizes="152x152" href="https://www.techadvisr.com/favicons/apple-touch-icon-152x152.png" />
-		<link rel="icon" type="image/png" href="https://www.techadvisr.com/favicons/favicon-196x196.png" sizes="196x196" />
-		<link rel="icon" type="image/png" href="https://www.techadvisr.com/favicons/favicon-96x96.png" sizes="96x96" />
-		<link rel="icon" type="image/png" href="https://www.techadvisr.com/favicons/favicon-32x32.png" sizes="32x32" />
-		<link rel="icon" type="image/png" href="https://www.techadvisr.com/favicons/favicon-16x16.png" sizes="16x16" />
-		<link rel="icon" type="image/png" href="https://www.techadvisr.com/favicons/favicon-128.png" sizes="128x128" />
-		<meta name="application-name" content="Techadvisr.com"/>
-		<meta name="msapplication-TileColor" content="#222222" />
-		<meta name="msapplication-TileImage" content="https://www.techadvisr.com/favicons/mstile-144x144.png" />
-		<meta name="msapplication-square70x70logo" content="https://www.techadvisr.com/favicons/mstile-70x70.png" />
-		<meta name="msapplication-square150x150logo" content="https://www.techadvisr.com/favicons/mstile-150x150.png" />
-		<meta name="msapplication-wide310x150logo" content="https://www.techadvisr.com/favicons/mstile-310x150.png" />
-		<meta name="msapplication-square310x310logo" content="https://www.techadvisr.com/favicons/mstile-310x310.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="css/flux.min.css" rel="stylesheet">
+	<link href="css/style.min.css" rel="stylesheet">
+	<link href="https://fonts.gstatic.com" rel="preconnect dns-prefetch">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta charset="utf-8">
+	<meta content="#00d400" name="theme-color">
+	<link href="https://www.techadvisr.com/favicons/favicon.ico" rel="icon">
+	<link href="https://www.techadvisr.com/favicons/apple-touch-icon-57x57.png"
+	rel="apple-touch-icon" sizes="57x57">
+	<link href="https://www.techadvisr.com/favicons/apple-touch-icon-114x114.png"
+	rel="apple-touch-icon" sizes="114x114">
+	<link href="https://www.techadvisr.coma/favicons/pple-touch-icon-72x72.png"
+	rel="apple-touch-icon" sizes="72x72">
+	<link href="https://www.techadvisr.com/favicons/apple-touch-icon-144x144.png"
+	rel="apple-touch-icon" sizes="144x144">
+	<link href="https://www.techadvisr.com/favicons/apple-touch-icon-60x60.png"
+	rel="apple-touch-icon" sizes="60x60">
+	<link href="https://www.techadvisr.com/favicons/apple-touch-icon-120x120.png"
+	rel="apple-touch-icon" sizes="120x120">
+	<link href="https://www.techadvisr.com/favicons/apple-touch-icon-76x76.png"
+	rel="apple-touch-icon" sizes="76x76">
+	<link href="https://www.techadvisr.com/favicons/apple-touch-icon-152x152.png"
+	rel="apple-touch-icon" sizes="152x152">
+	<link href="https://www.techadvisr.com/favicons/favicon-196x196.png" rel=
+	"icon" sizes="196x196" type="image/png">
+	<link href="https://www.techadvisr.com/favicons/favicon-96x96.png" rel="icon"
+	sizes="96x96" type="image/png">
+	<link href="https://www.techadvisr.com/favicons/favicon-32x32.png" rel="icon"
+	sizes="32x32" type="image/png">
+	<link href="https://www.techadvisr.com/favicons/favicon-16x16.png" rel="icon"
+	sizes="16x16" type="image/png">
+	<link href="https://www.techadvisr.com/favicons/favicon-128.png" rel="icon"
+	sizes="128x128" type="image/png">
+	<meta content="Techadvisr.com" name="application-name">
+	<meta content="#222222" name="msapplication-TileColor">
+	<meta content="https://www.techadvisr.com/favicons/mstile-144x144.png" name=
+	"msapplication-TileImage">
+	<meta content="https://www.techadvisr.com/favicons/mstile-70x70.png" name=
+	"msapplication-square70x70logo">
+	<meta content="https://www.techadvisr.com/favicons/mstile-150x150.png" name=
+	"msapplication-square150x150logo">
+	<meta content="https://www.techadvisr.com/favicons/mstile-310x150.png" name=
+	"msapplication-wide310x150logo">
+	<meta content="https://www.techadvisr.com/favicons/mstile-310x310.png" name=
+	"msapplication-square310x310logo">
+	<link href=
+	"https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+	rel="stylesheet">
+	<title></title>
 </head>
 <body>
-<div class="wrapper-offset-primary">
-  <h1>Welcome to Flux!</h1>
-    <p>Flux is an open source UX/UI design developed and maintained by Techadvisr for use across mixed media brand materials.  For now, it includes a .css and a .js file for applying the UX design to website and email materials, along with this document detailing the UX theory and usage.</p>
-  </div>
-<div class="wrapper-offset-primary">
-  <h4>Why re-invent the wheel?  Why not just use Material Design?</h4>
-  <p>When Google introduced its Material Design UX standard, it was quickly adopted by designers everywhere, and is available as itself or in some derivative form through every CMS system commonly in use today.  The result of this has been a trend towards a more standardized user experience across both Internet websites and device-level applications.  This has the benefit of familiarity for users when they encounter new content.  UI components like navigation icons, menu icons, etc are familiar to the user and don't need to be explained.  This is objectively a good thing.  However, there are several caveats to the wide-spread usage of Material Design and highly-derivative UX standards.</p>
-  <h4>The Internet is boring</h4>
-  <p>In the early days of the World Wide Web, there were no accepted or even suggested standards of UX/UI design.  Every website or application one encountered felt unique, and designers had maximum artistic freedom. A professional web designer was forced to think about UI design and the overall UX, which meant that a nice-looking, user-friendly website was much more difficult and expensive to create then than it is now.  While Google must be credited for the savings of time, money and frustration achieved by applying one open-source UX design to literally everything, applications and web sites feel less unique because of it.  Everything looks like it belongs to Google.</p>
-  <h4>Web Design <span class="subtitle-2">is</span> for Dummies</h4>
-  <p>Modern CMS packages such as Wordpress and Joomla, along with the widespread usage of Material Design have created a narrow expectation of what a "good" website should like, and anything that doesn't adhere to the current trends is not recognized for its uniqueness, but rather criticized for poor design practices.  In this context, anyone can do web design, as there is no longer any aspect of actual design involved.  One simply generates a Material Design theme, applies it to whatever Wordpress template is currently trending and inserts a bunch of cookie-cutter content.  As a result, many of those marketing themselves as professional web designers today don't have the slightest clue how to dig into html, css or javascript code to fix, modify or customize anything beyond what is available in a template.  They avoid revealing the fact that they have no idea what they're doing by countering any outside-the-box request from the client with, "That would be a bad idea, because... SEO."
-  <h4>Speaking of SEO...</h4>
-  <p>Google has not been the <span style="font-style: italic">best</span> search engine on the Internet in quite awhile.  For that, see <a href="https://duckduckgo.com">duckduckgo.com</a>.  Yet, due to several years of holding that position, the billions of dollars it generated for them, and a highly successful marketing strategy, it remains the most widely utilized.  Thus, designers are forced to optimize for Google's search routine if they hope to generate any noteworthy amount of traffic.  Google's (closed-source) algorithm is known to favor websites that follow accessibility and ease-of-use standards that are addressed by its Material Design UX, and thus employing Material Design is seen as a "magic bullet" that will land a site higher on Google's index.</p>
-  <h4>Dispelling the Myths</h4>
-  <p>It is possible to rank well on Google without building a cookie-cutter Wordpress website and using Material design.  In fact, a static website unburdened by the overhead required for a CMS to generate pages will load and perform faster, which is known to lead to better ranking in search results.  Designing for accessibility and ease of use is important, but it is possible to both achieve this, and pass Google's accessibility tests without producing a website that looks like it was copy/pasted from every other website on the Internet.  What follows is a set of UX design standards that address all the accessibility requirements known to affect Google ranking while maintaining the familiarity benefits of Material Design, but discarding its flat, bland, and generally boring aesthetics.</p>
-  <h4>Is it available for Wordpress?</h4>
-  <p>Currently, no.  It <i>is</i> open-source, under the MIT license which means free as in free beer. Feel free to convert it for Wordpress yourself if that's what you really want to do. The only thing we ask is that if you use Flux for your website project, you provide credit and a link to <a href="https://techadvisr.com">Techadvisr</a>.</p></div>
-  
-    <div class="wrapper">
-        <div style="width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
-            <h3>Typography</h3>
-            <hr style="margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;" />
-        </div>
-    </div>
-    <div class="wrapper">
-        <p>Fonts are designed to be responsive and scale to sane values, regardless of viewport size.  The initial settings somewhat follow Google's Material Design standards, but as Material Design templates don't seem to have any scaling built in, these should be more universally useful and provide a better cross-platform UX.  Two fonts are used and can be set by changing the --font-family-1 and --font-family-2 variables under the :root selector in the CSS.  Headlines 1-6 are styled onto the &#060;h1-6&#062; tags.  The other settings are classes, except "Body" and "Body 2" which represent the default font styless applied to &#060;body&#062; and &#060;p&#062;, respectively.</p>
-</div>
-<div class="wrapper">
-  <h1>Headline 1</h1>
-  <h2>Headline 2</h2>
-  <h3>Headline 3</h3>
-  <h4>Headline 4</h4>
-  <h5>Headline 5</h5>
-  <h6>Headline 6</h6>
-  <span class="subtitle-1">.subtitle-1</span>
-  <span class="subtitle-2">.subtitle-2</span>
-  Body
-  <p>Body 2</p>
-    <span class="button">.button</span>
-  <span class="caption">.caption</span>
-  <span class="overline">overline</span>
-</div>
-<div class="wrapper-offset-primary">
-    <div style="width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
-        <h3>Scrollbars</h3>
-        <hr style="margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;" />
-    </div>
-    <p>Scrollbars have been themed for browsers that support it.  Better cross-browser support is possible, and should be supported in the future.</p>
-</div>
-<div class="wrapper">
-            <div style="width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
-            <h3>Color Scheme</h3>
-            <hr style="margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;" />
-        </div>
-    <p>The color scheme in use is quite simple and minimalist.  The UX is really designed to work around one major color.  The easiest implementation is to select your primary color, along with a lightened and darkened shade of the same tone, and set the --primary, --primary-light and --primary-dark variables in the :root selector of the CSS.  Everything should work just fine.  If you need to use more than one major tone, you can try setting another color up as --secondary, --secondary-light and --secondary-dark, but as these are used for various drop shadows and borders throughout the UX, your mileage may vary.  If a one-color simplistic color scheme does not suit your needs, this UX/UI probably isn't a good fit for you.</p></div>
-  <div class="wrapper" style="margin-top: 40px;">
-    <div style="width: 100%; min-width: 300px; max-width: 30vw; padding: 20px; border: 1px solid var(--secondary)"><h6>Primary</h6>
-      <div style="width: 100%; height: 20vh; background: var(--primary);">
-      	--primary
-      </div>
-      <div style="width: 100%; display: flex; flex-direction: row;">
-        <div style="width: 50%; height: 10vh; background: var(--primary-light);">--primary-light</div>
-        <div style="width: 50%; height: 10vh; background: var(--primary-dark);">--primary-dark</div>
-      </div>
-    </div>
-      <div style="width: 100%; min-width: 300px; max-width: 30vw; padding: 20px; border: 1px solid var(--secondary)"><h6>Secondary</h6>
-      <div style="width: 100%; height: 20vh; color: var(--on-secondary); background: var(--secondary);">
-      	--secondary
-      </div>
-      <div style="width: 100%; display: flex; color: var(--on-secondary); flex-direction: row;">
-        <div style="width: 50%; height: 10vh; background: var(--secondary-light);">--secondary-light</div>
-        <div style="width: 50%; height: 10vh; background: var(--secondary-dark)">--secondary-dark</div>
-        </div></div>
-      <div style="width: 100%; min-width: 300px; max-width: 30vw;  padding: 20px; border 1px solid var(--secondary); border: 1px solid var(--secondary);"><h6>Neutral</h6>
-        <div style="height: 15vh; background: var(--neutral); border: 1px solid var(--secondary); color: var(--on-neutral);">--neutral</div><div style="height: 15vh; border: 1px solid var(--secondary); background: var(--neutral-offset); color: var(--on-neutral);">--neutral-offset</div>
-        </div>
-    </div>
-<div class="wrapper-offset-secondary">
-            <div style="width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
-            <h3>Wrapper Classes</h3>
-            <hr style="margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;" />
-        </div>
- <p>Three flex-box content wrapper classes are defined for you.  .wrapper, .wrapper-offset-secondary, and .wrapper-offset-primary.  They apply a neutral, secondary-light and primary-light background, respectively.  You should <span style="font-style: italic">always</span> use these content wrappers, as they have rules defined to make necessary adjustments to element classes, in order to keep the UX consistent across all background colors.</p>
-  </div>
-  <div class="wrapper-offset-primary">
-    <div style="width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
-        <h3>Interactive UI components</h3>
-        <hr style="margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;" />
-    </div>
-    <p>Interactive pieces of the UI are designed to be "chunky" enough for ease of use on mobile devices at a scale that is still usable for desktop and larger viewports.  This makes implementing a "mobile-first" design easier, keeps the code lightweight, and improves performance.  Hover animation are applied to most components on any desktop-size or larger viewport.   The hover animations are loaded through media queries in order to prevent mobile devices from loading code they won't utilize.  The goal is 100% code coverage capability, meaning no unnecessary code is ever loaded into memory.  We'll take the liberty of coining the term, "performance-first UX design."</p></div>  
-    <div class="wrapper">
-        <div class="wrapper">
-            <div class="caption" style="text-align: center; white-space: pre-line;">
-                &lt;button class=&quot;primary button&quot;&gt;
-                Button&lt;/button&gt;
-            </div>
-            <div class="caption" style="text-align: center; white-space: pre-line;">
-                &lt;a class=&quot;secondary button&quot;&gt;
-                Link&lt;/a&gt;
-            </div>  
-            <div class="caption" style="text-align: center; white-space: pre-line;">
-                &lt;button class=&quot;neutral button&quot;&gt;
-                Button&lt;/button&gt;
-            </div>
-        </div>
-        <div class="wrapper">
-            <a href="#" class="primary button effect twirl-left data-effect='Link'">Link</a>
-            <button class="primary button">Button</button>
-            <a href="#" class="secondary button">Link</a>
-            <button class="secondary button">Button</button>
-            <a href="#" class="neutral button">Link</a>          
-            <button class="neutral button">Button</button>
-        </div>
-        <div class="wrapper-offset-primary">
-            <button class="primary button">Button</button>
-            <a href="#" class="primary button">Link</a>
-            <button class="secondary button">Button</button>
-            <a href="#" class="secondary button">Link</a>
-            <button class="neutral button">Button</button>
-            <a href="#" class="neutral button">Link</a>            
-        </div>
-        <div class="wrapper-offset-secondary">
-            <a href="#" class="primary button">Link</a>
-            <button class="primary button">Button</button>
-            <a href="#" class="secondary button">Link</a>
-            <button class="secondary button">Button</button>
-            <a href="#" class="neutral button">Link</a>          
-            <button class="neutral button">Button</button>
-        </div>
-    </div> 
-<div class="wrapper">
-    <div class="caption" style="width: 30vw; white-space: pre-line;">
-        &lt;label class=&quot;checkbox&quot;&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;Checkbox
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;checkbox&quot;&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
-        &lt;/label&gt;
-    </div>
-    <div class="caption" style="width: 30vw; white-space: pre-line;">
-        &lt;label class=&quot;radio&quot;&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;Radio Button
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;radio&quot; name=&quot;radio&quot;&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;radiomark&quot;&gt;&lt;/span&gt;
-        &lt;/label&gt;
-    </div>
-    <div class="caption" style="width: 30vw; white-space: pre-line;">
-        &lt;label class=&quot;toggle&quot;&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;Toggle
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;range&quot; min=0 max=1&gt;
-        &lt;/label&gt;
-    </div>
-</div>
-<div class="wrapper" style="margin-top: 30px;">
-    <label class="checkbox">Checkbox
-        <input type="checkbox" checked>
-        <span class="checkmark"></span>
-    </label>
-    <label class="radio">Radio Button
-        <input type="radio" name="radio">
-        <span class="radiomark"></span>
-    </label>
-    <label class="slider-label">Toggle
-        <input class="slider" type="range" min=0 max=1 />
-    </label>
-</div>
-<div class="wrapper-offset-primary">
-    <label class="checkbox">Checkbox
-        <input type="checkbox" checked>
-        <span class="checkmark"></span>
-    </label>
-    <label class="radio">Radio Button
-        <input type="radio" name="radio">
-        <span class="radiomark"></span>
-    </label>
-    <label class="slider-label">Toggle
-        <input class="slider" type="range" min=0 max=1 />
-    </label>
-</div>
-<div class="wrapper-offset-secondary">
-    <label class="checkbox">Checkbox
-        <input type="checkbox" checked>
-        <span class="checkmark"></span>
-    </label>
-    <label class="radio">Radio Button
-        <input type="radio" checked="checked" name="radio">
-        <span class="radiomark"></span>
-    </label>
-    <label class="slider-label">Toggle
-        <input class="slider" type="range" min=0 max=1 />
-    </label>
-</div>
-<div class="wrapper">
-    <div class="caption" style="white-space: pre-line;">
-        &lt;div class=&quot;text-input-container&quot;&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;input class=&quot;text-input&quot; type=&quot;text&quot;&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;First Name&lt;/label&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;focus-border&quot;&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&gt;&lt;/i&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
-        &lt;/div&gt;
-    </div>
-    <div class="caption" style="white-space: pre-line">
-        &lt;div class=&quot;text-input-container&quot;&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;textarea class=&quot;text-input&quot;  rows=2&gt;&lt;/textarea&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Message&lt;/label&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;focus-border&quot;&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&gt;&lt;/i&gt;
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
-        &lt;/div&gt;
-    </div>
-</div>
-<div class="wrapper">
-    <div style="width: 45vw;">
-        <div class="text-input-container">
-            <input class="text-input" type="text">
-            <label>First Name</label>
-            <span class="focus-border">
-               <i></i>
-            </span>
-        </div>
-    </div>
-    <div style="width: 45vw;">
-        <div class="text-input-container">
-            <textarea class="text-input"  rows=2></textarea>
-            <label>Message</label>
-            <span class="focus-border">
-                <i></i>
-            </span>
-        </div>
-    </div>
-</div>
-<div class="wrapper-offset-primary">
-    <div style="width: 45vw;">
-        <div class="text-input-container">
-            <input class="text-input" type="text">
-            <label>First Name</label>
-            <span class="focus-border">
-               <i></i>
-            </span>
-        </div>
-    </div>
-    <div style="width: 45vw;">
-        <div class="text-input-container">
-            <textarea class="text-input"  rows=2></textarea>
-            <label>Message</label>
-            <span class="focus-border">
-                <i></i>
-            </span>
-        </div>
-    </div>
-</div>
-<div class="wrapper-offset-secondary">
-    <div style="width: 45vw;">
-        <div class="text-input-container">
-            <input class="text-input" type="text">
-            <label>First Name</label>
-            <span class="focus-border">
-               <i></i>
-            </span>
-        </div>
-    </div>
-    <div style="width: 45vw;">
-        <div class="text-input-container">
-            <textarea class="text-input"  rows=2></textarea>
-            <label>Message</label>
-            <span class="focus-border">
-                <i></i>
-            </span>
-        </div>
-    </div>
-</div>    
-  <div class="wrapper">
-    <div style="width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
-        <h3>Content Cards</h3>
-        <hr style="margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;" />
-    </div>
-  </div>
-<div class="wrapper">
-  <div class="card">
-    <div class="card-top">To Create a Content Card:</div>
-    <img class="card-image" src="images/example.webp">
-      <div class="card-content caption" style="white-space: pre-line;">
-            &lt;div class=&quot;card&quot;&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;card-top&quot;&gt;Title&lt;/div&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;img class=&quot;card-image&quot; src=&quot;&quot;&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;card-content caption&quot;&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor...
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-            &lt;/div&gt;
-      </div>
-    </div>
-    <div class="card">
-        <div class="card-top">Title</div>
-        <img class="card-image" src="images/example.webp">
-        <div class="card-content caption">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
-    </div>
-    <div class="card">
-        <div class="card-top">Title</div>
-        <img class="card-image" src="images/example.webp">
-      <div class="card-content caption">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
-  </div>
-
-</div>
-    <div class="wrapper-offset-primary">
-        <div style="width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
-            <h3>Iconography</h3>
-            <hr style="margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;" />
-        </div>
-    </div>
-    <div class="wrapper-offset-primary">
-        <p>The icons can be generated in the kit's primary, secondary and neutral colors by applying the classes .filter-primary, .filter-secondary and .filter-neutral, respectively.  These classes aren't in the CSS, they are dynamically handled by JavaScript, which reads in the customized colors from CSS variables and calculates a filter to apply to the .svg icon.  Again, it might seem as though we're re-creating the wheel when fontawesome is a thing, but this iconset has had its code thoroughly optimized for maximum performance and perhaps most importantly, all the icons have the same 1:1 aspect ratio, so they will line up neatly when trying to put them in a row, unlike fontawesome and other such packages. Mouseover effects are handled automatically by JavaScript.  Classes have been provided to scale the icons to various sizes, as detailed below.</p>
-    </div>
-    <div class="wrapper-offset-primary caption" style="flex-direction: column;">
-        <div style="width: 50vw; text-align: right;">
-            &lt;img src="bars.svg" class="icon icon-1x filter-secondary" />
-            <img src="images/bars.svg" class="icon icon-1x filter-secondary"/>
-        </div>
-        <div style="width: 50vw; text-align: right;">
-            &lt;img src="facebook.svg" class="icon icon-2x filter-secondary" />
-            <img src="images/facebook.svg" class="icon icon-2x filter-secondary"/>
-        </div>
-        <div style="width: 50vw; text-align: right;">
-            &lt;img src="twitter.svg class="icon icon-3x filter-secondary" />
-            <img src="images/twitter.svg" class="icon icon-3x filter-secondary"/>
-        </div>
-        <div style="width: 50vw; text-align: right;">
-            &lt;img src="linked-in.svg class="icon icon-4x filter-secondary" />
-            <img src="images/linked-in.svg" class="icon icon-4x filter-secondary"/>
-        </div>
-        <div style="width: 50vw; text-align: right;">
-            &lt;img src="pinterest.svg" class="icon icon-5x filter-secondary" />
-            <img src="images/pinterest.svg" class="icon icon-5x filter-secondary"/>
-        </div>
-        <div style="width: 50vw; text-align: right;">
-            &lt;img src="phone.svg" class=icon icon-6x filter-secondary" />
-            <img src="images/phone.svg" class="icon icon-6x filter-secondary"/>
-        </div>
-        <div style="width: 50vw; text-align: right;">
-            &lt;img src="home.svg class="icon icon-7x filter-secondary" />
-            <img src="images/home.svg" class="icon icon-7x filter-secondary"/>
-        </div>
-        <div style="width: 50vw; text-align: right;">
-            &lt;img src="mail.svg class="icon icon-8x filter-secondary" />
-            <img src="images/mail.svg" class="icon icon-8x filter-secondary"/>
-        </div>
-    </div>
-    <div class="wrapper">
-          <div style="width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
-            <h3>Modals</h3>
-            <hr style="margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;" />
-        </div>
-    </div>
-    <div class="wrapper">
-        <p>Click the button below to reveal a modal popup.  Clicking the close button in the modal or clicking anywhere outside of it will cause the modal to close. A modal popup can be launched from a button given the class ".modal-reveal" in this manner.  Use the following code block just before the closing &lt;/body> tag to create your modal popup:</p>
-        <p class=caption style="white-space: pre-line;">
-            &lt;div class=&quot;modal&quot;&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;modal-content&quot;&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;modal-close&quot;&gt;X&lt;/div&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;modal-headline&quot;&gt;Our Strategies Grow Businesses!&lt;/span&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class=&quot;caption&quot;&gt;Tech Tips, News, Reviews &amp; Exclusive Promotions for Preferred Customers delivered right to your inbox!&lt;/p&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;form&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;text-input-container&quot;&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class=&quot;text-input&quot; type=&quot;text&quot;&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;E-mail Address&lt;/label&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;focus-border&quot;&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&gt;&lt;/i&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;submit&quot; class=&quot;modal-button primary button&quot;&gt;Submit&lt;/button&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/form&gt;
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;    
-            &lt;/div&gt;</p>
-        <button class="neutral button modal-reveal">Trigger Modal</button>
-        <div class="modal">
-            <div class="modal-content">
-                <div class="modal-close">X</div>
-                <span class="modal-headline">Our Strategies Grow Businesses!</span>
-                <p class="caption">Tech Tips, News, Reviews & Exclusive Promotions for Preferred Customers delivered right to your inbox!</p>
-                <form>
-                    <div class="text-input-container">
-                        <input class="text-input" type="text">
-                        <label>E-mail Address</label>
-                        <span class="focus-border">
-                            <i></i>
-                        </span>
-                    </div>
-                    <button type="submit" class="modal-button primary button">Submit</button>
-                </form>
-            </div>     
-        </div>
-        <p>Alternatively, a modal popup can be triggered when a user scrolls the document a certain percentage. This allows you to present modal popups only to users who seem to be engaged in your content.  To trigger your modal in this way, add the following line to the &lt;head> of your document: <span class="caption">&lt;style>:root{--modal-trigger: 50;}&lt;/style></span> Where the value of the --modal-trigger variable is set to the scroll percentage at which you want to trigger the modal popup.</p>
-        <p>And of course, we can also launch an "exit-intent" modal popup when we detect that our user is attempting to leave our page.  For this functionality, add this line to the &lt;head> of your html document: <span class="caption">&lt;style>:root{--exit-intent: 1;}&lt;/style></span> TODO: Exit intent popups are not working in Firefox or on mobile devices.</p>
-        <p>The latter 2 methods will check for the existence of a sessionStorage variable indicating the modal popup has been seen before displaying it.   If the variable is not set, it will be set before the modal popup is displayed, and any further popup triggers will be ignored for the duration of the session.  If you're using the modal for something like adding users to an email list, it is a good idea to provide an obvious route to this functionality elsewhere within your document, in case the user inadvertently closes the dialog without meaning to so you don't lose the conversion.</p>
-    </div>
-    <div class="modal">
-    <div class="modal-content">
-        <div class="modal-close">X</div>
-        <span class="modal-headline">Our Strategies Grow Businesses!</span>
-        <p class="caption">Tech Tips, News, Reviews & Exclusive Promotions for Preferred Customers delivered right to your inbox!</p>
-        <form>
-            <div class="text-input-container">
-                <input class="text-input" type="text">
-                <label>E-mail Address</label>
-                <span class="focus-border">
-                    <i></i>
-                </span>
-            </div>
-            <button type="submit" class="modal-button primary button">Submit</button>
-        </form>
-        <script src="js/flux.js"></script>
-    </div>
-</div>
+	<div class="wrapper-offset-primary">
+		<h1>Welcome to Flux!</h1>
+		<p>Flux is an open source UX/UI design developed and maintained by Techadvisr
+		for use across mixed media brand materials. For now, it includes a .css and a
+		.js file for applying the UX design to website and email materials, along
+		with this document detailing the UX theory and usage.</p>
+	</div>
+	<div class="wrapper-offset-primary">
+		<h4>Why re-invent the wheel? Why not just use Material Design?</h4>
+		<p>When Google introduced its Material Design UX standard, it was quickly
+		adopted by designers everywhere, and is available as itself or in some
+		derivative form through every CMS system commonly in use today. The result of
+		this has been a trend towards a more standardized user experience across both
+		Internet websites and device-level applications. This has the benefit of
+		familiarity for users when they encounter new content. UI components like
+		navigation icons, menu icons, etc are familiar to the user and don't need to
+		be explained. This is objectively a good thing. However, there are several
+		caveats to the wide-spread usage of Material Design and highly-derivative UX
+		standards.</p>
+		<h4>The Internet is boring</h4>
+		<p>In the early days of the World Wide Web, there were no accepted or even
+		suggested standards of UX/UI design. Every website or application one
+		encountered felt unique, and designers had maximum artistic freedom. A
+		professional web designer was forced to think about UI design and the overall
+		UX, which meant that a nice-looking, user-friendly website was much more
+		difficult and expensive to create then than it is now. While Google must be
+		credited for the savings of time, money and frustration achieved by applying
+		one open-source UX design to literally everything, applications and web sites
+		feel less unique because of it. Everything looks like it belongs to
+		Google.</p>
+		<h4>Web Design <span class="subtitle-2">is</span> for Dummies</h4>
+		<p>Modern CMS packages such as Wordpress and Joomla, along with the
+		widespread usage of Material Design have created a narrow expectation of what
+		a "good" website should like, and anything that doesn't adhere to the current
+		trends is not recognized for its uniqueness, but rather criticized for poor
+		design practices. In this context, anyone can do web design, as there is no
+		longer any aspect of actual design involved. One simply generates a Material
+		Design theme, applies it to whatever Wordpress template is currently trending
+		and inserts a bunch of cookie-cutter content. As a result, many of those
+		marketing themselves as professional web designers today don't have the
+		slightest clue how to dig into html, css or javascript code to fix, modify or
+		customize anything beyond what is available in a template. They avoid
+		revealing the fact that they have no idea what they're doing by countering
+		any outside-the-box request from the client with, "That would be a bad idea,
+		because... SEO."</p>
+		<h4>Speaking of SEO...</h4>
+		<p>Google has not been the <span style="font-style: italic">best</span>
+		search engine on the Internet in quite awhile. For that, see <a href=
+		"https://duckduckgo.com">duckduckgo.com</a>. Yet, due to several years of
+		holding that position, the billions of dollars it generated for them, and a
+		highly successful marketing strategy, it remains the most widely utilized.
+		Thus, designers are forced to optimize for Google's search routine if they
+		hope to generate any noteworthy amount of traffic. Google's (closed-source)
+		algorithm is known to favor websites that follow accessibility and
+		ease-of-use standards that are addressed by its Material Design UX, and thus
+		employing Material Design is seen as a "magic bullet" that will land a site
+		higher on Google's index.</p>
+		<h4>Dispelling the Myths</h4>
+		<p>It is possible to rank well on Google without building a cookie-cutter
+		Wordpress website and using Material design. In fact, a static website
+		unburdened by the overhead required for a CMS to generate pages will load and
+		perform faster, which is known to lead to better ranking in search results.
+		Designing for accessibility and ease of use is important, but it is possible
+		to both achieve this, and pass Google's accessibility tests without producing
+		a website that looks like it was copy/pasted from every other website on the
+		Internet. What follows is a set of UX design standards that address all the
+		accessibility requirements known to affect Google ranking while maintaining
+		the familiarity benefits of Material Design, but discarding its flat, bland,
+		and generally boring aesthetics.</p>
+		<h4>Is it available for Wordpress?</h4>
+		<p>Currently, no. It <i>is</i> open-source, under the MIT license which means
+		free as in free beer. Feel free to convert it for Wordpress yourself if
+		that's what you really want to do. The only thing we ask is that if you use
+		Flux for your website project, you provide credit and a link to <a href=
+		"https://techadvisr.com">Techadvisr</a>.</p>
+	</div>
+	<div class="wrapper">
+		<div style=
+		"width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
+			<h3>Typography</h3>
+			<hr style=
+			"margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;">
+		</div>
+	</div>
+	<div class="wrapper">
+		<p>Fonts are designed to be responsive and scale to sane values, regardless
+		of viewport size. The initial settings somewhat follow Google's Material
+		Design standards, but as Material Design templates don't seem to have any
+		scaling built in, these should be more universally useful and provide a
+		better cross-platform UX. Two fonts are used and can be set by changing the
+		--font-family-1 and --font-family-2 variables under the :root selector in the
+		CSS. Headlines 1-6 are styled onto the &#060;h1-6&#062; tags. The other
+		settings are classes, except "Body" and "Body 2" which represent the default
+		font styless applied to &#060;body&#062; and &#060;p&#062;, respectively.</p>
+	</div>
+	<div class="wrapper">
+		<h1>Headline 1</h1>
+		<h2>Headline 2</h2>
+		<h3>Headline 3</h3>
+		<h4>Headline 4</h4>
+		<h5>Headline 5</h5>
+		<h6>Headline 6</h6><span class="subtitle-1">.subtitle-1</span> <span class=
+		"subtitle-2">.subtitle-2</span> Body
+		<p>Body 2</p><span class="button">.button</span> <span class=
+		"caption">.caption</span> <span class="overline">overline</span>
+	</div>
+	<div class="wrapper-offset-primary">
+		<div style=
+		"width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
+			<h3>Scrollbars</h3>
+			<hr style=
+			"margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;">
+		</div>
+		<p>Scrollbars have been themed for browsers that support it. Better
+		cross-browser support is possible, and should be supported in the future.</p>
+	</div>
+	<div class="wrapper">
+		<div style=
+		"width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
+			<h3>Color Scheme</h3>
+			<hr style=
+			"margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;">
+		</div>
+		<p>The color scheme in use is quite simple and minimalist. The UX is really
+		designed to work around one major color. The easiest implementation is to
+		select your primary color, along with a lightened and darkened shade of the
+		same tone, and set the --primary, --primary-light and --primary-dark
+		variables in the :root selector of the CSS. Everything should work just fine.
+		If you need to use more than one major tone, you can try setting another
+		color up as --secondary, --secondary-light and --secondary-dark, but as these
+		are used for various drop shadows and borders throughout the UX, your mileage
+		may vary. If a one-color simplistic color scheme does not suit your needs,
+		this UX/UI probably isn't a good fit for you.</p>
+	</div>
+	<div class="wrapper" style="margin-top: 40px;">
+		<div style=
+		"width: 100%; min-width: 300px; max-width: 30vw; padding: 20px; border: 1px solid var(--secondary)">
+			<h6>Primary</h6>
+			<div style="width: 100%; height: 20vh; background: var(--primary);">
+				--primary
+			</div>
+			<div style="width: 100%; display: flex; flex-direction: row;">
+				<div style="width: 50%; height: 10vh; background: var(--primary-light);">
+					--primary-light
+				</div>
+				<div style="width: 50%; height: 10vh; background: var(--primary-dark);">
+					--primary-dark
+				</div>
+			</div>
+		</div>
+		<div style=
+		"width: 100%; min-width: 300px; max-width: 30vw; padding: 20px; border: 1px solid var(--secondary)">
+			<h6>Secondary</h6>
+			<div style=
+			"width: 100%; height: 20vh; color: var(--on-secondary); background: var(--secondary);">
+				--secondary
+			</div>
+			<div style=
+			"width: 100%; display: flex; color: var(--on-secondary); flex-direction: row;">
+				<div style="width: 50%; height: 10vh; background: var(--secondary-light);">
+					--secondary-light
+				</div>
+				<div style="width: 50%; height: 10vh; background: var(--secondary-dark)">
+					--secondary-dark
+				</div>
+			</div>
+		</div>
+		<div style=
+		"width: 100%; min-width: 300px; max-width: 30vw; padding: 20px; border 1px solid var(--secondary); border: 1px solid var(--secondary);">
+			<h6>Neutral</h6>
+			<div style=
+			"height: 15vh; background: var(--neutral); border: 1px solid var(--secondary); color: var(--on-neutral);">
+				--neutral
+			</div>
+			<div style=
+			"height: 15vh; border: 1px solid var(--secondary); background: var(--neutral-offset); color: var(--on-neutral);">
+				--neutral-offset
+			</div>
+		</div>
+	</div>
+	<div class="wrapper-offset-secondary">
+		<div style=
+		"width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
+			<h3>Wrapper Classes</h3>
+			<hr style=
+			"margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;">
+		</div>
+		<p>Three flex-box content wrapper classes are defined for you. .wrapper,
+		.wrapper-offset-secondary, and .wrapper-offset-primary. They apply a neutral,
+		secondary-light and primary-light background, respectively. You should
+		<span style="font-style: italic">always</span> use these content wrappers, as
+		they have rules defined to make necessary adjustments to element classes, in
+		order to keep the UX consistent across all background colors.</p>
+	</div>
+	<div class="wrapper-offset-primary">
+		<div style=
+		"width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
+			<h3>Interactive UI components</h3>
+			<hr style=
+			"margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;">
+		</div>
+		<p>Interactive pieces of the UI are designed to be "chunky" enough for ease
+		of use on mobile devices at a scale that is still usable for desktop and
+		larger viewports. This makes implementing a "mobile-first" design easier,
+		keeps the code lightweight, and improves performance. Hover animation are
+		applied to most components on any desktop-size or larger viewport. The hover
+		animations are loaded through media queries in order to prevent mobile
+		devices from loading code they won't utilize. The goal is 100% code coverage
+		capability, meaning no unnecessary code is ever loaded into memory. We'll
+		take the liberty of coining the term, "performance-first UX design."</p>
+	</div>
+	<div class="wrapper">
+		<div class="wrapper">
+			<div class="caption" style="text-align: center; white-space: pre-line;">
+				&lt;button class=&quot;primary button&quot;&gt; Button&lt;/button&gt;
+			</div>
+			<div class="caption" style="text-align: center; white-space: pre-line;">
+				&lt;a class=&quot;secondary button&quot;&gt; Link&lt;/a&gt;
+			</div>
+			<div class="caption" style="text-align: center; white-space: pre-line;">
+				&lt;button class=&quot;neutral button&quot;&gt; Button&lt;/button&gt;
+			</div>
+		</div>
+		<div class="wrapper">
+			<a class="primary button effect twirl-left data-effect='Link'" href=
+			"#">Link</a> <button class="primary button">Button</button> <a class=
+			"secondary button" href="#">Link</a> <button class=
+			"secondary button">Button</button> <a class="neutral button" href=
+			"#">Link</a> <button class="neutral button">Button</button>
+		</div>
+		<div class="wrapper-offset-primary">
+			<button class="primary button">Button</button> <a class="primary button"
+			href="#">Link</a> <button class="secondary button">Button</button> <a class=
+			"secondary button" href="#">Link</a> <button class=
+			"neutral button">Button</button> <a class="neutral button" href="#">Link</a>
+		</div>
+		<div class="wrapper-offset-secondary">
+			<a class="primary button" href="#">Link</a> <button class=
+			"primary button">Button</button> <a class="secondary button" href=
+			"#">Link</a> <button class="secondary button">Button</button> <a class=
+			"neutral button" href="#">Link</a> <button class=
+			"neutral button">Button</button>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="caption" style="width: 30vw; white-space: pre-line;">
+			&lt;label class=&quot;checkbox&quot;&gt; &nbsp;&nbsp;&nbsp;&nbsp;Checkbox
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;checkbox&quot;&gt;
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;span
+			class=&quot;checkmark&quot;&gt;&lt;/span&gt; &lt;/label&gt;
+		</div>
+		<div class="caption" style="width: 30vw; white-space: pre-line;">
+			&lt;label class=&quot;radio&quot;&gt; &nbsp;&nbsp;&nbsp;&nbsp;Radio Button
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;radio&quot;
+			name=&quot;radio&quot;&gt; &nbsp;&nbsp;&nbsp;&nbsp;&lt;span
+			class=&quot;radiomark&quot;&gt;&lt;/span&gt; &lt;/label&gt;
+		</div>
+		<div class="caption" style="width: 30vw; white-space: pre-line;">
+			&lt;label class=&quot;toggle&quot;&gt; &nbsp;&nbsp;&nbsp;&nbsp;Toggle
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;range&quot; min=0 max=1&gt;
+			&lt;/label&gt;
+		</div>
+	</div>
+	<div class="wrapper" style="margin-top: 30px;">
+		<label class="checkbox">Checkbox <input checked type="checkbox"> <span class=
+		"checkmark"></span></label> <label class="radio">Radio Button <input name=
+		"radio" type="radio"> <span class="radiomark"></span></label> <label class=
+		"slider-label">Toggle <input class="slider" max="1" min="0" type=
+		"range"></label>
+	</div>
+	<div class="wrapper-offset-primary">
+		<label class="checkbox">Checkbox <input checked type="checkbox"> <span class=
+		"checkmark"></span></label> <label class="radio">Radio Button <input name=
+		"radio" type="radio"> <span class="radiomark"></span></label> <label class=
+		"slider-label">Toggle <input class="slider" max="1" min="0" type=
+		"range"></label>
+	</div>
+	<div class="wrapper-offset-secondary">
+		<label class="checkbox">Checkbox <input checked type="checkbox"> <span class=
+		"checkmark"></span></label> <label class="radio">Radio Button <input checked=
+		"checked" name="radio" type="radio"> <span class="radiomark"></span></label>
+		<label class="slider-label">Toggle <input class="slider" max="1" min="0"
+		type="range"></label>
+	</div>
+	<div class="wrapper">
+		<div class="caption" style="white-space: pre-line;">
+			&lt;div class=&quot;text-input-container&quot;&gt;
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;input class=&quot;text-input&quot;
+			type=&quot;text&quot;&gt; &nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;First
+			Name&lt;/label&gt; &nbsp;&nbsp;&nbsp;&nbsp;&lt;span
+			class=&quot;focus-border&quot;&gt;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&gt;&lt;/i&gt;
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt; &lt;/div&gt;
+		</div>
+		<div class="caption" style="white-space: pre-line">
+			&lt;div class=&quot;text-input-container&quot;&gt;
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;textarea class=&quot;text-input&quot;
+			rows=2&gt;&lt;/textarea&gt;
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Message&lt;/label&gt;
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;focus-border&quot;&gt;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&gt;&lt;/i&gt;
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt; &lt;/div&gt;
+		</div>
+	</div>
+	<div class="wrapper">
+		<div style="width: 45vw;">
+			<div class="text-input-container">
+				<input class="text-input" type="text"> <label>First Name</label>
+				<span class="focus-border"><i></i></span>
+			</div>
+		</div>
+		<div style="width: 45vw;">
+			<div class="text-input-container">
+				<textarea class="text-input" rows="2"></textarea> <label>Message</label>
+				<span class="focus-border"><i></i></span>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper-offset-primary">
+		<div style="width: 45vw;">
+			<div class="text-input-container">
+				<input class="text-input" type="text"> <label>First Name</label>
+				<span class="focus-border"><i></i></span>
+			</div>
+		</div>
+		<div style="width: 45vw;">
+			<div class="text-input-container">
+				<textarea class="text-input" rows="2"></textarea> <label>Message</label>
+				<span class="focus-border"><i></i></span>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper-offset-secondary">
+		<div style="width: 45vw;">
+			<div class="text-input-container">
+				<input class="text-input" type="text"> <label>First Name</label>
+				<span class="focus-border"><i></i></span>
+			</div>
+		</div>
+		<div style="width: 45vw;">
+			<div class="text-input-container">
+				<textarea class="text-input" rows="2"></textarea> <label>Message</label>
+				<span class="focus-border"><i></i></span>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div style=
+		"width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
+			<h3>Content Cards</h3>
+			<hr style=
+			"margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;">
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="card">
+			<div class="card-top">
+				To Create a Content Card:
+			</div><img class="card-image" src="images/example.webp">
+			<div class="card-content caption" style="white-space: pre-line;">
+				&lt;div class=&quot;card&quot;&gt; &nbsp;&nbsp;&nbsp;&nbsp;&lt;div
+				class=&quot;card-top&quot;&gt;Title&lt;/div&gt;
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;img class=&quot;card-image&quot;
+				src=&quot;&quot;&gt; &nbsp;&nbsp;&nbsp;&nbsp;&lt;div
+				class=&quot;card-content caption&quot;&gt;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor...
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; &lt;/div&gt;
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-top">
+				Title
+			</div><img class="card-image" src="images/example.webp">
+			<div class="card-content caption">
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+				nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+				wisi enim ad minim veniam.
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-top">
+				Title
+			</div><img class="card-image" src="images/example.webp">
+			<div class="card-content caption">
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+				nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+				wisi enim ad minim veniam.
+			</div>
+		</div>
+	</div>
+	<div class="wrapper-offset-primary">
+		<div style=
+		"width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
+			<h3>Iconography</h3>
+			<hr style=
+			"margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;">
+		</div>
+	</div>
+	<div class="wrapper-offset-primary">
+		<p>The icons can be generated in the kit's primary, secondary and neutral
+		colors by applying the classes .filter-primary, .filter-secondary and
+		.filter-neutral, respectively. These classes aren't in the CSS, they are
+		dynamically handled by JavaScript, which reads in the customized colors from
+		CSS variables and calculates a filter to apply to the .svg icon. Again, it
+		might seem as though we're re-creating the wheel when fontawesome is a thing,
+		but this iconset has had its code thoroughly optimized for maximum
+		performance and perhaps most importantly, all the icons have the same 1:1
+		aspect ratio, so they will line up neatly when trying to put them in a row,
+		unlike fontawesome and other such packages. Mouseover effects are handled
+		automatically by JavaScript. Classes have been provided to scale the icons to
+		various sizes, as detailed below.</p>
+	</div>
+	<div class="wrapper-offset-primary caption" style="flex-direction: column;">
+		<div style="width: 50vw; text-align: right;">&lt;img src="bars.svg"
+		class="icon icon-1x filter-secondary" /&gt; <img class=
+		"icon icon-1x filter-secondary" src="images/bars.svg"></div>
+		<div style="width: 50vw; text-align: right;">&lt;img src="facebook.svg"
+		class="icon icon-2x filter-secondary" /&gt; <img class=
+		"icon icon-2x filter-secondary" src="images/facebook.svg"></div>
+		<div style="width: 50vw; text-align: right;">&lt;img src="twitter.svg
+		class="icon icon-3x filter-secondary" /&gt; <img class=
+		"icon icon-3x filter-secondary" src="images/twitter.svg"></div>
+		<div style="width: 50vw; text-align: right;">&lt;img src="linked-in.svg
+		class="icon icon-4x filter-secondary" /&gt; <img class=
+		"icon icon-4x filter-secondary" src="images/linked-in.svg"></div>
+		<div style="width: 50vw; text-align: right;">&lt;img src="pinterest.svg"
+		class="icon icon-5x filter-secondary" /&gt; <img class=
+		"icon icon-5x filter-secondary" src="images/pinterest.svg"></div>
+		<div style="width: 50vw; text-align: right;">&lt;img src="phone.svg"
+		class=icon icon-6x filter-secondary" /&gt; <img class=
+		"icon icon-6x filter-secondary" src="images/phone.svg"></div>
+		<div style="width: 50vw; text-align: right;">&lt;img src="home.svg
+		class="icon icon-7x filter-secondary" /&gt; <img class=
+		"icon icon-7x filter-secondary" src="images/home.svg"></div>
+		<div style="width: 50vw; text-align: right;">&lt;img src="mail.svg
+		class="icon icon-8x filter-secondary" /&gt; <img class=
+		"icon icon-8x filter-secondary" src="images/mail.svg"></div>
+	</div>
+	<div class="wrapper">
+		<div style=
+		"width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
+			<h3>Modals</h3>
+			<hr style=
+			"margin-left: 15px; height: 0; margin-right: 15px; width: 100%; border: 2px solid #333; box-shadow: 2px 2px 3px #666666;">
+		</div>
+	</div>
+	<div class="wrapper">
+		<p>Click the button below to reveal a modal popup. Clicking the close button
+		in the modal or clicking anywhere outside of it will cause the modal to
+		close. A modal popup can be launched from a button given the class
+		".modal-reveal" in this manner. Use the following code block just before the
+		closing &lt;/body&gt; tag to create your modal popup:</p>
+		<p class="caption" style="white-space: pre-line;">&lt;div
+		class=&quot;modal&quot;&gt; &nbsp;&nbsp;&nbsp;&nbsp;&lt;div
+		class=&quot;modal-content&quot;&gt;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div
+		class=&quot;modal-close&quot;&gt;X&lt;/div&gt;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span
+		class=&quot;modal-headline&quot;&gt;Our Strategies Grow
+		Businesses!&lt;/span&gt;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p
+		class=&quot;caption&quot;&gt;Tech Tips, News, Reviews &amp; Exclusive
+		Promotions for Preferred Customers delivered right to your inbox!&lt;/p&gt;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;form&gt;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div
+		class=&quot;text-input-container&quot;&gt;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input
+		class=&quot;text-input&quot; type=&quot;text&quot;&gt;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;E-mail
+		Address&lt;/label&gt;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span
+		class=&quot;focus-border&quot;&gt;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&gt;&lt;/i&gt;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button
+		type=&quot;submit&quot; class=&quot;modal-button primary
+		button&quot;&gt;Submit&lt;/button&gt;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/form&gt;
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt; &lt;/div&gt;</p><button class=
+		"neutral button modal-reveal">Trigger Modal</button>
+		<div class="modal">
+			<div class="modal-content">
+				<div class="modal-close">
+					X
+				</div><span class="modal-headline">Our Strategies Grow Businesses!</span>
+				<p class="caption">Tech Tips, News, Reviews & Exclusive Promotions for
+				Preferred Customers delivered right to your inbox!</p>
+				<form>
+					<div class="text-input-container">
+						<input class="text-input" type="text"> <label>E-mail Address</label>
+						<span class="focus-border"><i></i></span>
+					</div><button class="modal-button primary button" type=
+					"submit">Submit</button>
+				</form>
+			</div>
+		</div>
+		<p>Alternatively, a modal popup can be triggered when a user scrolls the
+		document a certain percentage. This allows you to present modal popups only
+		to users who seem to be engaged in your content. To trigger your modal in
+		this way, add the following line to the &lt;head&gt; of your document:
+		<span class="caption">&lt;style&gt;:root{--modal-trigger:
+		50;}&lt;/style&gt;</span> Where the value of the --modal-trigger variable is
+		set to the scroll percentage at which you want to trigger the modal
+		popup.</p>
+		<p>And of course, we can also launch an "exit-intent" modal popup when we
+		detect that our user is attempting to leave our page. For this functionality,
+		add this line to the &lt;head&gt; of your html document: <span class=
+		"caption">&lt;style&gt;:root{--exit-intent: 1;}&lt;/style&gt;</span> TODO:
+		Exit intent popups are not working in Firefox or on mobile devices.</p>
+		<p>The latter 2 methods will check for the existence of a sessionStorage
+		variable indicating the modal popup has been seen before displaying it. If
+		the variable is not set, it will be set before the modal popup is displayed,
+		and any further popup triggers will be ignored for the duration of the
+		session. If you're using the modal for something like adding users to an
+		email list, it is a good idea to provide an obvious route to this
+		functionality elsewhere within your document, in case the user inadvertently
+		closes the dialog without meaning to so you don't lose the conversion.</p>
+	</div>
+	<div class="modal">
+		<div class="modal-content">
+			<div class="modal-close">
+				X
+			</div><span class="modal-headline">Our Strategies Grow Businesses!</span>
+			<p class="caption">Tech Tips, News, Reviews & Exclusive Promotions for
+			Preferred Customers delivered right to your inbox!</p>
+			<form>
+				<div class="text-input-container">
+					<input class="text-input" type="text"> <label>E-mail Address</label>
+					<span class="focus-border"><i></i></span>
+				</div><button class="modal-button primary button" type=
+				"submit">Submit</button>
+			</form>
+			<script src="js/flux.js">
+			</script>
+		</div>
+	</div>
 </body>
 </html>
