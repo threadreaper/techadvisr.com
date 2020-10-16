@@ -10,6 +10,19 @@ function classToggle() {
     }
   }
 }
+
+function openNav() {
+  document.querySelector(".sidenav").style.width = "250px";
+  document.querySelector(".body").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
+}
+
+function closeNav() {
+  document.querySelector(".sidenav").style.width = "0";
+  document.querySelector(".body").style.marginLeft = "0";
+  document.body.style.backgroundColor = "var(--neutral)";
+}
+
 var sliders;
 sliders = document.querySelectorAll('.slider');
 
@@ -111,39 +124,7 @@ document.addEventListener('mouseleave', function(event) {
 });
 
 
-var icons;
-icons = document.querySelectorAll('.icon');
 
-for (i = 0; i < icons.length; i += 1) {
-  if (RegExp(/\bfilter-primary\b/).test(icons[i].className) == true) {
-    icons[i].addEventListener('mouseover', function() {
-      this.classList.remove('filter-primary');
-      this.classList.add('filter-neutral');
-    });
-    icons[i].addEventListener('mouseleave', function() {
-      this.classList.remove('filter-neutral');
-      this.classList.add('filter-primary');
-    });
-  } else if (RegExp(/\bfilter-secondary\b/).test(icons[i].className) == true) {
-    icons[i].addEventListener('mouseover', function() {
-      this.classList.remove('filter-secondary');
-      this.classList.add('filter-neutral');
-    });
-    icons[i].addEventListener('mouseleave', function() {
-      this.classList.remove('filter-neutral');
-      this.classList.add('filter-secondary');
-    });
-  } else {
-    icons[i].addEventListener('mouseover', function() {
-      this.classList.remove('filter-neutral');
-      this.classList.add('filter-primary');
-    });
-    icons[i].addEventListener('mouseout', function() {
-      this.classList.remove('filter-primary');
-      this.classList.add('filter-neutral');
-    });
-  }
-}
 
 class Color {
   constructor(r, g, b) {
@@ -444,38 +425,74 @@ function hexToRgb(hex) {
 
 document.addEventListener("DOMContentLoaded", function(event) {
   'use strict';
-  var list, i, filter;
-  const primary = getComputedStyle(document.documentElement).getPropertyValue('--primary').trim();
-  const secondary = getComputedStyle(document.documentElement).getPropertyValue('--secondary').trim();
-  const neutral = getComputedStyle(document.documentElement).getPropertyValue('--neutral').trim();
+    setTimeout(function () {
+                var list, i, filter;
+                const primary = getComputedStyle(document.documentElement).getPropertyValue('--primary').trim();
+                const secondary = getComputedStyle(document.documentElement).getPropertyValue('--secondary').trim();
+                const neutral = getComputedStyle(document.documentElement).getPropertyValue('--neutral').trim();
 
-  list = [primary, secondary, neutral];
+                list = [primary, secondary, neutral];
 
-  for (i = 0; i < list.length; i += 1) {
-    const rgb = hexToRgb(list[i]);
-    const color = new Color(rgb[0], rgb[1], rgb[2]);
-    const solver = new Solver(color);
-    const result = solver.solve();
+                for (i = 0; i < list.length; i += 1) {
+                const rgb = hexToRgb(list[i]);
+                const color = new Color(rgb[0], rgb[1], rgb[2]);
+                const solver = new Solver(color);
+                const result = solver.solve();
 
-    if (i == 0) {
-      filter = '.filter-primary';
-    } else if (i == 1) {
-      filter = '.filter-secondary';
-    } else {
-      filter = '.filter-neutral';
-    }
+                if (i == 0) {
+                  filter = '.filter-primary';
+                } else if (i == 1) {
+                  filter = '.filter-secondary';
+                } else {
+                  filter = '.filter-neutral';
+                }
 
-    var sheet = document.createElement('style');
-    sheet.innerHTML = (filter + " {" + result.filter + "}");
-    document.body.appendChild(sheet);
-  }
+                var sheet = document.createElement('style');
+                sheet.innerHTML = (filter + " {" + result.filter + "}");
+                document.body.appendChild(sheet);
+                }
 
-  var inputs = document.querySelectorAll('.text-input');
+                var inputs = document.querySelectorAll('.text-input');
 
-  for (i = 0; i < inputs.length; i += 1) {
-    inputs[i].addEventListener('focusout', function() {
-      classToggle();
-    });
-  }
+                for (i = 0; i < inputs.length; i += 1) {
+                inputs[i].addEventListener('focusout', function() {
+                  classToggle();
+                });
+                }
+
+                var icons;
+                icons = document.querySelectorAll('.icon');
+
+                for (i = 0; i < icons.length; i += 1) {
+                  if (icons[i].classList.contains('filter-primary') == true) {
+                    icons[i].addEventListener('mouseover', function() {
+                      this.classList.remove('filter-primary');
+                      this.classList.add('filter-neutral');
+                    });
+                    icons[i].addEventListener('mouseleave', function() {
+                      this.classList.remove('filter-neutral');
+                      this.classList.add('filter-primary');
+                    });
+                  } else if (icons[i].classList.contains('filter-secondary') == true) {
+                    icons[i].addEventListener('mouseover', function() {
+                      this.classList.remove('filter-secondary');
+                      this.classList.add('filter-neutral');
+                    });
+                    icons[i].addEventListener('mouseleave', function() {
+                      this.classList.remove('filter-neutral');
+                      this.classList.add('filter-secondary');
+                    });
+                  } else {
+                    icons[i].addEventListener('mouseover', function() {
+                      this.classList.remove('filter-neutral');
+                      this.classList.add('filter-primary');
+                    });
+                    icons[i].addEventListener('mouseout', function() {
+                      this.classList.remove('filter-primary');
+                      this.classList.add('filter-neutral');
+                    });
+                  }
+                }
+     }, 500);
 
 });

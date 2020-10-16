@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link href="https://fonts.gstatic.com" rel="preconnect dns-prefetch">
     <link href="“https://www.techadvisr.com”" rel="canonical">
@@ -47,8 +46,10 @@
 </head>
 
 <body>
+    <div class="body">
     <div class="header">
-        <a aria-label="Menu" href="sitemap.html" role="button"><img alt="Menu" class="icon icon-2x filter-neutral" src="images/bars.svg"></a> <a href="#top-wp"><img alt="Techadvisr logo" class="logo" src="images/techadvisr-logo.webp"></a>
+        <span aria-label="Menu" role="button" onclick="openNav()"><img alt="Menu" class="icon icon-2x filter-neutral" src="images/bars.svg"></span>
+        <a href="#top-wp"><img alt="Techadvisr logo" class="logo" src="images/techadvisr-logo.webp"></a>
         <div class="header-spacer"></div><a href="https://blog.techadvisr.com"><span>Blog</span></a> <a aria-label="Home" href="#top-wp" role="button"><img alt="Home" class="icon icon-2x filter-neutral" src="images/home.svg"></a> <a aria-label="Email Techadvisr" href="https://www.techadvisr.com#contact" role="button"><img alt="Email Techadvisr" class="icon icon-2x filter-neutral" src="images/mail.svg"></a> <a aria-label="Call Techadvisr" class="menu" href="tel:785-205-9113" role="button"><img alt="Call Techadvisr" class="icon icon-2x filter-neutral" src="images/phone.svg"></a>
     </div><a id="top-wp"></a>
     <div class="wrapper">
@@ -272,7 +273,17 @@
         </div>
     </div>
     <iframe src="footer.html" onload="this.before((this.contentDocument.body || this.contentDocument).children[0]);this.remove()"></iframe>
-    <script src="https://www.techadvisr.com/js/flux.min.js"></script>
+
+    <div class="sidenav">
+        <a role="button" aria-label="Close Menu" class="close" onclick="closeNav()">&times;</a>
+        <a href="https://www.techadvisr.com" class="button">Home</a>
+        <a href="https://blog.techadvisr.com" class="button">Blog</a>
+        <a href="https://www.techadvisr.com/flux.html" class="button">UX Design</a>
+        <a href="https://www.techadvisr.com/sitemap.html" class="button">Sitemap</a>
+        <a href="https://www.techadvisr.com/privacy.html" class="button">Privacy Policy</a>
+    </div>
+    </div>
+    <script src="https://www.techadvisr.com/js/flux.js"></script>
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -292,6 +303,7 @@
         }
 
     </script>
+
 </body>
 
 </html>
