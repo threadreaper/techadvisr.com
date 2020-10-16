@@ -44,8 +44,9 @@
         <style>:root{--modal-trigger: 50;}</style>
 	</head>
     <body>
+        <div class="body">
         <div class="header">
-            <a href=""><img src="https://www.techadvisr.com/images/bars.svg" alt="Menu" class="icon icon-2x filter-neutral" aria-label="Menu" /></a>
+           <span aria-label="Menu" role="button" onclick="openNav()"><img alt="Menu" class="icon icon-2x filter-neutral" src="https://www.techadvisr.com/images/bars.svg"></span>
             <a href="https://www.techadvisr.com"><img src="https://www.techadvisr.com/images/techadvisr-logo.webp" alt="Techadvisr logo"/></a>
             <div class="header-spacer"></div>
         </div>
@@ -134,6 +135,17 @@
                 </form>
             </div>
         </div>
+         <iframe src="footer.html" onload="this.before((this.contentDocument.body || this.contentDocument).children[0]);this.remove()"></iframe>
+        <div class="sidenav">
+            <a role="button" aria-label="Close Menu" class="close" onclick="closeNav()">&times;</a>
+            <a href="https://www.techadvisr.com" class="button">Home</a>
+            <a href="https://blog.techadvisr.com" class="button">Blog</a>
+            <a href="https://www.techadvisr.com/flux.html" class="button">UX Design</a>
+            <a href="https://www.techadvisr.com/sitemap.html" class="button">Sitemap</a>
+            <a href="https://www.techadvisr.com/privacy.html" class="button">Privacy Policy</a>
+        </div>
+        </div>
+        <script src="https://www.techadvisr.com/js/flux.min.js"></script>
         <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
         <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
         <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
