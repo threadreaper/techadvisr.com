@@ -372,9 +372,8 @@ div.social-icons {
 }
 
 .main {
-    width: 90%;
-    margin: auto;
-    margin-top: 60px;
+    margin: 60px;
+    width: 100%;
     border-radius: 6px;
     background: var(--neutral-offset);
     border: 2px outset var(--neutral);
