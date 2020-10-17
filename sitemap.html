@@ -4,7 +4,7 @@
     <link rel=stylesheet href="https://www.techadvisr.com/css/flux.min.css" />
     <link rel=stylesheet href="https://www.techadvisr.com/css/style.min.css" />
 </head>
-<body>
+<body class="body">
     <div class="sitemap-header">
         <h4>Techadvisr.com</h4>
         <h6>Website Sitemap &mdash; v1</h6>
@@ -48,7 +48,7 @@
             </a>
         </li>
     </ul>
-    <iframe src="footer.html" onload="this.before((this.contentDocument.body || this.contentDocument).children[0]);this.remove()"></iframe>
+    <iframe src="footer.html" onload="this.before(this.contentDocument.children[0]);this.remove()"></iframe>
     <script src="https://www.techadvisr.com/js/flux.min.js"></script>
     <script type="application/ld+json">
         {
@@ -67,7 +67,6 @@
             },
             "url": "https://www.techadvisr.com/"
         }
-
     </script>
 </body>
 </html>
