@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <link href="css/flux.min.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="https://www.techadvisr.com/css/flux.min.css" rel="stylesheet">
+    <link href="https://www.techadvisr.com/css/style.min.css" rel="stylesheet">
     <link href="https://fonts.gstatic.com" rel="preconnect dns-prefetch">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -13,7 +13,7 @@
     <link href="https://www.techadvisr.com/favicons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
     <link href="https://www.techadvisr.com/favicons/apple-touch-icon-114x114.png" rel="apple-touch-icon"
         sizes="114x114">
-    <link href="https://www.techadvisr.coma/favicons/pple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="https://www.techadvisr.com/favicons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
     <link href="https://www.techadvisr.com/favicons/apple-touch-icon-144x144.png" rel="apple-touch-icon"
         sizes="144x144">
     <link href="https://www.techadvisr.com/favicons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
@@ -40,7 +40,21 @@
     <title></title>
 </head>
 
-<body class="body">
+<body>
+    <div class="header">
+		<input class="hamburger-input" id="hamburger-input" onclick="openNav()" type="checkbox">
+		<label class="hamburger" for="hamburger-input"></label>
+		<a href="#top-wp"><img alt="Techadvisr logo" class="logo" src="images/techadvisr-logo.webp" /></a>
+		<div class="header-spacer"></div>
+		<a href="https://blog.techadvisr.com"><span>Blog</span></a>
+		<a aria-label="Home" href="#top-wp" role="button"><img alt="Home" class="icon icon-2x filter-neutral"
+				src="images/home.svg" /></a>
+		<a aria-label="Email Techadvisr" href="https://www.techadvisr.com#contact" role="button"><img
+				alt="Email Techadvisr" class="icon icon-2x filter-neutral" src="images/mail.svg" /></a>
+		<a aria-label="Call Techadvisr" class="menu" href="tel:785-205-9113" role="button"><img alt="Call Techadvisr"
+				class="icon icon-2x filter-neutral" src="images/phone.svg" /></a>
+	</div>
+	<div class="body">
     <div class="wrapper-offset-primary">
         <h1>Welcome to Flux!</h1>
         <p>Flux is an open source UX/UI design developed and maintained by Techadvisr

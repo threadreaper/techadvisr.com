@@ -51,7 +51,7 @@
 			sizes="114x114"
 		/>
 		<link
-			href="https://www.techadvisr.coma/favicons/pple-touch-icon-72x72.png"
+			href="https://www.techadvisr.com/favicons/apple-touch-icon-72x72.png"
 			rel="apple-touch-icon"
 			sizes="72x72"
 		/>
@@ -132,54 +132,27 @@
 			content="https://www.techadvisr.com/favicons/mstile-310x310.png"
 			name="msapplication-square310x310logo"
 		/>
-		<script async src="js/lazysizes.min.js"></script>
+		<script async src="https://www.techadvisr.com/js/lazysizes.min.js"></script>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700;800;900&display=swjavascript change element color based on current backgroundap"
 			rel="stylesheet"
 		/>
 	</head>
-	<body class="body">
-			<div class="header">
-				<span aria-label="Menu" role="button" onclick="openNav()"
-					><img
-						alt="Menu"
-						class="icon icon-2x filter-neutral"
-						src="images/bars.svg"
-				/></span>
-				<a href="#top-wp"
-					><img
-						alt="Techadvisr logo"
-						class="logo"
-						src="images/techadvisr-logo.webp"
-				/></a>
-				<div class="header-spacer"></div>
-				<a href="https://blog.techadvisr.com"><span>Blog</span></a>
-				<a aria-label="Home" href="#top-wp" role="button"
-					><img
-						alt="Home"
-						class="icon icon-2x filter-neutral"
-						src="images/home.svg"
-				/></a>
-				<a
-					aria-label="Email Techadvisr"
-					href="https://www.techadvisr.com#contact"
-					role="button"
-					><img
-						alt="Email Techadvisr"
-						class="icon icon-2x filter-neutral"
-						src="images/mail.svg"
-				/></a>
-				<a
-					aria-label="Call Techadvisr"
-					class="menu"
-					href="tel:785-205-9113"
-					role="button"
-					><img
-						alt="Call Techadvisr"
-						class="icon icon-2x filter-neutral"
-						src="images/phone.svg"
-				/></a>
-			</div>
+	<body>
+		<div class="header">
+			<input class="hamburger-input" id="hamburger-input" onclick="openNav()" type="checkbox">
+			<label class="hamburger" for="hamburger-input"></label>
+			<a href="#top-wp"><img alt="Techadvisr logo" class="logo" src="images/techadvisr-logo.webp" /></a>
+			<div class="header-spacer"></div>
+			<a href="https://blog.techadvisr.com"><span>Blog</span></a>
+			<a aria-label="Home" href="#top-wp" role="button"><img alt="Home" class="icon icon-2x filter-neutral"
+					src="images/home.svg" /></a>
+			<a aria-label="Email Techadvisr" href="https://www.techadvisr.com#contact" role="button"><img
+					alt="Email Techadvisr" class="icon icon-2x filter-neutral" src="images/mail.svg" /></a>
+			<a aria-label="Call Techadvisr" class="menu" href="tel:785-205-9113" role="button"><img alt="Call Techadvisr"
+					class="icon icon-2x filter-neutral" src="images/phone.svg" /></a>
+		</div>
+		<div class="body">
 
 			<div class="wrapper col" style="height: 63vh">
 				<h2>Hey, We Get It...</h2>
