@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="utf-8" />
-	<link href="https://fonts.gstatic.com" rel="preconnect dns-prefetch" />
-	<title>Whoops, it broke</title>
-	<link href="https://www.techadvisr.com/css/flux.min.css" rel="stylesheet" type="text/css" />
-	<link href="https://www.techadvisr.com/css/style.min.css" rel="stylesheet" type="text/css" />
-	<script async src="https://www.techadvisr.com/js/lazysizes.min.js"></script>
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap"	rel="stylesheet" />
-</head>
-
+	<head>
+		<meta charset="utf-8" />
+		<link href="https://fonts.gstatic.com" rel="preconnect dns-prefetch" />
+		<title>Whoops, it broke</title>
+		<link href="https://www.techadvisr.com/css/flux.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://www.techadvisr.com/css/style.min.css" rel="stylesheet" type="text/css" />
+		<script async src="https://www.techadvisr.com/js/lazysizes.min.js"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+	</head>
 <body>
-	<div class="header">
+    <div class="header animate__animated animate__hinge">
 		<input class="hamburger-input" id="hamburger-input" onclick="openNav()" type="checkbox">
 		<label class="hamburger" for="hamburger-input"></label>
-		<a href="https://www.techadvisr.com/#top-wp"><img alt="Techadvisr logo" class="logo"
-				src="https://www.techadvisr.com/images/techadvisr-logo.webp" /></a>
+		<a href="https://www.techadvisr.com/#top-wp"><img alt="Techadvisr logo" class="logo" src="https://www.techadvisr.com/images/techadvisr-logo.webp" /></a>
 		<div class="header-spacer"></div>
 		<a href="https://blog.techadvisr.com"><span>Blog</span></a>
-		<a aria-label="Home" href="https://www.techadvisr.com/#top-wp" role="button"><img alt="Home"
-				class="icon icon-2x filter-neutral" src="https://www.techadvisr.com/images/home.svg" /></a>
+		<a aria-label="Home" href="https://www.techadvisr.com/#top-wp" role="button"><img alt="Home" class="icon icon-2x filter-neutral"
+				src="https://www.techadvisr.com/images/home.svg" /></a>
 		<a aria-label="Email Techadvisr" href="https://www.techadvisr.com#contact" role="button"><img
-				alt="Email Techadvisr" class="icon icon-2x filter-neutral"
-				src="https://www.techadvisr.com/images/mail.svg" /></a>
+				alt="Email Techadvisr" class="icon icon-2x filter-neutral" src="https://www.techadvisr.com/images/mail.svg" /></a>
 		<a aria-label="Call Techadvisr" class="menu" href="tel:785-205-9113" role="button"><img alt="Call Techadvisr"
 				class="icon icon-2x filter-neutral" src="https://www.techadvisr.com/images/phone.svg" /></a>
 	</div>
 	<div class="body">
-		<div class="wrapper">
-			<div id="splash">
-				<div class="flex40">
-				</div>
-				<div id="headline">
-					<h1>Technology can be a pain in the ass.</h1>
-				</div>
-				<div id="splash-text">Oops. That page doesn't exist or some other horrible error has occurred.</div>
-				<div class="flex40">
-					<a href="https://www.techadvisr.com" role="button" aria-label="Home"
-						class="primary button splash-button">Let us fix it.</a>
-				</div>
+	<div class="wrapper">
+		<div id="splash">
+			<div class="flex40">
+			</div>
+			<div id="headline">
+				<h1>Technology can be a pain in the ass.</h1>
+			</div>
+			<div id="splash-text">Oops. That page doesn't exist or some other horrible error has occurred.</div>
+			<div class="flex40">
+				<a href="https://www.techadvisr.com" role="button" aria-label="Home"
+					class="primary button splash-button">Let us fix it.</a>
 			</div>
 		</div>
-		<iframe src="footer.html" onload="this.before(this.contentDocument.children[0]);this.remove()"></iframe>
-		<script src="https://www.techadvisr.com/js/flux.min.js"></script>
+	</div>
+	<iframe src="footer.html" onload="this.before(this.contentDocument.children[0]);this.remove()"></iframe>
+	<script src="https://www.techadvisr.com/js/flux.min.js"></script>
 </body>
 
 </html>
