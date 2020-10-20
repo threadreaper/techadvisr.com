@@ -622,17 +622,6 @@ div.social-icons {
     color: var(--neutral-offset);
 }
 
-.sitemap-root a:after {
-    content: "";
-    position: absolute;
-    height: 40px;
-    width: 20px;
-    border-left: 2px solid var(--secondary-light);
-    border-bottom: 2px solid var(--secondary-light);
-    top: 50px;
-    left: 6px;
-}
-
 .sitemap-main {
     margin: 20px;
     list-style: none;
@@ -648,38 +637,6 @@ div.social-icons {
     font-size: .7rem;
     white-space: nowrap;
 
-}
-
-.sitemap-main a:after {
-    content: "";
-    position: absolute;
-    height: 40px;
-    width: 20px;
-    border-left: 2px solid var(--secondary-light);
-    border-bottom: 2px solid var(--secondary-light);
-    top: 50px;
-    left: 6px;
-}
-
-.sitemap-main li:last-child a:after {
-    display: none;
-}
-
-.sitemap-main li:last-child {
-    position: relative;
-}
-
-.sitemap-main li:last-child:before {
-    content: "";
-    position: absolute;
-    height: 60px;
-    border-left: 2px solid var(--secondary-light);
-    top: -65px;
-    left: 7px;
-}
-
-.sitemap-main li li:before {
-    display: none;
 }
 
 .sitemap-main ul {
@@ -706,15 +663,6 @@ div.social-icons {
     margin: 10px;
     list-style: none;
     position: relative;
-}
-
-.sitemap-aux:before {
-    content: "";
-    position: absolute;
-    height: 200px;
-    border-left: 2px solid var(--secondary-light);
-    top: -200px;
-    left: 17px;
 }
 
 .sitemap-aux a {
