@@ -12,6 +12,7 @@
 	<body>
 		<iframe src="header.html"
 		onload="this.before(this.contentDocument.children[0]);this.remove()"></iframe>
+		<div class="body">
 			<div class="wrapper col" style="height: 63vh">
 				<h2>Hey, We Get It...</h2>
 				<br />
@@ -87,7 +88,6 @@
 		<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
 		<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
 		<script>
-			const qS = document.querySelector.bind(document),
 				done = qS(".done"),
 				email = qS("#email"),
 				loader = qS(".loader"),
