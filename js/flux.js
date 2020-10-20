@@ -1,3 +1,5 @@
+const qS = document.querySelector.bind(document);
+
 function classToggle() {
 	"use strict";
 	var i, inputs;
@@ -12,14 +14,16 @@ function classToggle() {
 }
 
 function openNav() {
-	document.querySelector(".sidenav").style.width = "250px";
-	document.querySelector(".body").style.marginLeft = "250px";
+	qS(".hamburger-input").setAttribute('onclick','closeNav()')
+	qS(".sidenav").style.width = "250px";
+	qS(".body").style.marginLeft = "250px";
 	document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
 }
-
+  
 function closeNav() {
-	document.querySelector(".sidenav").style.width = "0";
-	document.querySelector(".body").style.marginLeft = "0";
+	qS(".hamburger-input").setAttribute('onclick','openNav()')
+	qS(".sidenav").style.width = "0";
+	qS(".body").style.marginLeft = "0";
 	document.body.style.backgroundColor = "var(--neutral)";
 }
 
@@ -37,7 +41,7 @@ for (i = 0; i < sliders.length; i += 1) {
 }
 
 var modal, modalButton, modalClose;
-var modal = document.querySelector(".modal");
+var modal = qS(".modal");
 
 function showModal() {
 	storage = window.sessionStorage;
@@ -47,7 +51,7 @@ function showModal() {
 	modal.style.visibility = "visible";
 }
 
-modalReveal = document.querySelector(".modal-reveal");
+modalReveal = qS(".modal-reveal");
 if (modalReveal) {
 	modalReveal.addEventListener("click", function () {
 		modal.style.visibility = "visible";
@@ -69,7 +73,7 @@ if (modal) {
 	});
 }
 
-modalClose = document.querySelector(".modal-close");
+modalClose = qS(".modal-close");
 
 if (modalClose) {
 	modalClose.addEventListener("click", function () {
