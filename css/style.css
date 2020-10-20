@@ -145,7 +145,7 @@ body {
 	height: 40px;
 }
 
-.header a:hover {
+.header a span:hover {
     color: var(--primary);
 }
 
