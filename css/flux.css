@@ -626,31 +626,8 @@ a.button {
 	transform: rotate(40deg);
 }
 
-.text-input-container {
-	width: 100%;
-	margin: 3%;
-	margin-left: 0;
-	position: relative;
-	margin-top: 20px;
-}
-
-.text-input {
-	background: var(--neutral-offset);
-	font: 400 15px "Lato";
-	width: 100%;
-	letter-spacing: 1px;
-	border-radius: 6px;
-	-webkit-box-shadow: inset 3px 3px 4px var(--secondary);
-	box-shadow: inset 3px 3px 4px var(--secondary);
-	border: 0;
-	padding: 7px;
-	-webkit-transition: 0.3s;
-	transition: 0.3s;
-}
-
 .text-input-container textarea {
 	width: 97%;
-	margin-right: 0;
 	resize: none;
 }
 
@@ -667,34 +644,51 @@ a.button {
 	}
 }
 
+.text-input-container {
+	width: 100%;
+	margin: 10px;
+	position: relative;
+}
+
+.text-input {
+	background: var(--neutral-offset);
+	font: 400 15px "Lato";
+	width: 100%;
+	letter-spacing: 1px;
+	border-radius: 6px;
+	-webkit-box-shadow: inset 2px 2px 2px var(--secondary);
+	box-shadow: inset 2px 2px 2px var(--secondary);
+	padding: 7px;
+}
+
 .text-input ~ .focus-border:before,
 .text-input ~ .focus-border:after {
 	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
+	background: transparent;
+	height: calc(100% - 5px);
 	width: 0;
-	height: 4px;
-	background-color: var(--secondary);
-	-webkit-transition: 0.5s;
-	transition: 0.5s;
+	border-radius: 6px;
+	pointer-events: none;
+	-webkit-transition: 0.6s ease-in;
+	transition: 0.6s ease-in;
 }
 
-.text-input ~ .focus-border:after {
-	top: auto;
-	bottom: 0;
-	left: auto;
+.text-input ~ .focus-border:before {
+	border-bottom: 5px inset var(--secondary);
 	right: 0;
+	left: auto;
 }
 
-.text-input-container textarea ~ .focus-border:after {
+textarea.text-input ~ .focus-border:before {
 	right: 3%;
 	left: auto;
 }
 
-.text-input-container textarea:focus ~ .focus-border:before,
-.text-input-container textarea:focus ~ .focus-border:after {
-	width: 97%;
+.text-input ~ .focus-border:after {
+	border-top: 5px inset var(--secondary);
 }
 
 .text-input ~ .focus-border i:before,
@@ -703,40 +697,49 @@ a.button {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 4px;
+	width: calc(100% - 5px);
 	height: 0;
-	background-color: var(--secondary);
-	-webkit-transition: 0.5s;
-	transition: 0.5s;
+	border-radius: 6px;
+	pointer-events: none;
+	-webkit-transition: 0.6s;
+	transition: 0.6s;
+}
+
+textarea.text-input ~ .focus-border i:before,
+textarea.text-input ~ .focus-border i:after {
+	width: calc(97% - 5px);
+}
+
+
+.text-input ~ .focus-border i:before {
+	border-left: 5px inset var(--secondary);
 }
 
 .text-input ~ .focus-border i:after {
-	left: auto;
-	right: 0;
-	top: auto;
+	border-right: 5px inset var(--secondary);
 	bottom: 0;
-}
-
-.text-input-container textarea ~ .focus-border i:after {
-	right: auto;
+	top: auto;
 }
 
 .text-input:focus ~ .focus-border:before,
 .text-input:focus ~ .focus-border:after,
-.has-content.text-input ~ .focus-border:before,
-.has-content.text-input ~ .focus-border:after {
+.text-input:valid ~ .focus-border:before,
+.text-input:valid ~ .focus-border:after {
 	width: 100%;
-	-webkit-transition: 0.5s;
-	transition: 0.5s;
+}
+
+textarea.text-input:focus ~ .focus-border:before,
+textarea.text-input:focus ~ .focus-border:after,
+textarea.text-input:valid ~ .focus-border:before,
+textarea.text-input:valid ~ .focus-border:after {
+	width: 97%;
 }
 
 .text-input:focus ~ .focus-border i:before,
 .text-input:focus ~ .focus-border i:after,
-.has-content.text-input ~ .focus-border i:before,
-.has-content.text-input ~ .focus-border i:after {
+.text-input:valid ~ .focus-border i:before,
+.text-input:valid ~ .focus-border i:after {
 	height: 100%;
-	-webkit-transition: 0.5s;
-	transition: 0.5s;
 }
 
 .text-input ~ label {
@@ -745,27 +748,33 @@ a.button {
 	width: 100%;
 	top: 8px;
 	pointer-events: none;
-	-webkit-transition: 0.5s;
-	transition: 0.5s;
+	-webkit-transition: 0.4s ease-in-out;
+	transition: 0.4s ease-in-out;
 	color: var(--secondary-light);
-	font: 400 15px "Lato";
+	font: 400 16px "Lato";
+	letter-spacing: 2px;
 }
 
 .text-input:focus ~ label,
-.has-content.text-input ~ label {
-	top: -18px;
-	left: 0;
-	font: 600 12px "Lato";
+.text-input:valid ~ label {
+	top: -20px;
+	left: 6px;
+	font: 600 14px "Lato";
+	letter-spacing: 6px;
 	text-transform: uppercase;
 	color: var(--secondary);
-	text-shadow: 2px 2px 4px var(--secondary);
-	-webkit-transition: 0.5s;
-	transition: 0.5s;
+	pointer-events: none;
+	-webkit-transition: 0.4s ease-in-out;
+	transition: 0.4s ease-in-out;
+}
+
+.text-input:focus {
+	outline: none;
 }
 
 .wrapper-offset-secondary .text-input:focus ~ label,
-.wrapper-offset-secondary .has-content.text-input ~ label {
-	color: var(--primary);
+.wrapper-offset-secondary .text-input:valid ~ label {
+	color: var(--primary-light);
 }
 
 .card {
@@ -887,7 +896,7 @@ a.button {
 	position: absolute;
 	left: -220px;
 	top: 20px;
-	box-shadow: inset 10px 10px 15px #222,
+	box-shadow: inset 10px 10px 15px var(--secondary),
 		4px 4px 8px 5px var(--secondary-highlight),
 		-1px -1px 4px 3px var(--neutral-offset);
 	background: -moz-linear-gradient(
@@ -926,11 +935,15 @@ a.button {
 .slider::-moz-range-thumb {
 	width: 80px;
 	height: 46px;
-	background: -webkit-linear-gradient(top left, #f2f2f2 0%, #696969 100%);
-	border: 1px solid #696969;
+	background: -webkit-linear-gradient(
+		top left,
+		#f2f2f2 0%,
+		var(--secondary-light) 100%
+	);
+	border: 1px solid var(--secondary-light);
 	border-radius: 21px;
-	box-shadow: inset 4px 4px #f2f2f2, inset -3px -3px 3px #696969,
-		0 2px 3px #222;
+	box-shadow: inset 4px 4px #f2f2f2,
+		inset -3px -3px 3px var(--secondary-light), 0 2px 3px var(--secondary);
 	cursor: pointer;
 	-moz-appearance: none;
 	z-index: 2;
@@ -941,11 +954,15 @@ a.button {
 	top: -1px;
 	width: 80px;
 	height: 52px;
-	background: -webkit-linear-gradient(top left, #f2f2f2 0%, #696969 100%);
-	border: 1px solid #696969;
+	background: -webkit-linear-gradient(
+		top left,
+		#f2f2f2 0%,
+		var(--secondary-light) 100%
+	);
+	border: 1px solid var(--secondary-light);
 	border-radius: 21px;
-	box-shadow: inset 4px 4px #f2f2f2, inset -3px -3px 3px #696969,
-		0 2px 3px #222;
+	box-shadow: inset 4px 4px #f2f2f2,
+		inset -3px -3px 3px var(--secondary-light), 0 2px 3px var(--secondary);
 	cursor: pointer;
 	-webkit-appearance: none;
 	z-index: 2;
@@ -954,31 +971,35 @@ a.button {
 .slider::-webkit-slider-thumb:hover {
 	position: relative;
 	top: 0;
-	box-shadow: inset 4px 4px #f2f2f2, inset -3px -3px 3px #696969,
-		0 2px 3px #222;
+	box-shadow: inset 4px 4px #f2f2f2,
+		inset -3px -3px 3px var(--secondary-light), 0 2px 3px var(--secondary);
 }
 
 .wrapper-offset-primary input[type="range"].slider {
 	-webkit-box-shadow: 4px 4px 8px 5px var(--primary-dark),
-		inset 10px 10px 15px #222, -2px -2px 4px 4px var(--neutral-offset);
-	box-shadow: 4px 4px 8px 5px var(--primary-dark), inset 10px 10px 15px #222,
+		inset 10px 10px 15px var(--secondary),
+		-2px -2px 4px 4px var(--neutral-offset);
+	box-shadow: 4px 4px 8px 5px var(--primary-dark),
+		inset 10px 10px 15px var(--secondary),
 		-2px -2px 4px 4px var(--neutral-offset);
 }
 
 .wrapper-offset-secondary input[type="range"].slider {
 	border: 2px outset var(--secondary-highlight);
 	-webkit-box-shadow: 4px 4px 8px 5px var(--secondary),
-		inset 10px 10px 15px #222, -1px -1px 4px 3px var(--neutral-offset);
-	box-shadow: 4px 4px 8px 5px var(--secondary), inset 10px 10px 15px #222,
+		inset 10px 10px 15px var(--secondary),
+		-1px -1px 4px 3px var(--neutral-offset);
+	box-shadow: 4px 4px 8px 5px var(--secondary),
+		inset 10px 10px 15px var(--secondary),
 		-1px -1px 4px 3px var(--neutral-offset);
 }
 
 .unsubscribe {
 	margin: 5%;
 	margin-left: 0;
-	background: linear-gradient(to bottom right, #00ff00, #222);
-	border: 4px outset #aaa;
-	box-shadow: 2px 2px 3px 1px #222;
+	background: linear-gradient(to bottom right, #00ff00, var(--secondary));
+	border: 4px outset var(--neutral-offset);
+	box-shadow: 2px 2px 3px 1px var(--secondary);
 	border-radius: 6px;
 	overflow: hidden;
 	padding: 15px 15px;
@@ -994,10 +1015,10 @@ a.button {
 }
 
 .unsubscribe.finished {
-	background: linear-gradient(to bottom right, #00ff00, #222);
+	background: linear-gradient(to bottom right, #00ff00, var(--secondary));
 	border-radius: 50px;
 	transition: 0.4s 0.4s cubic-bezier(0.35, -0.77, 0.67, 1.88);
-	border: 2px outset #aaa;
+	border: 2px outset var(--neutral-offset);
 	width: 61px;
 	height: 61px;
 	margin: 5%;
@@ -1012,7 +1033,7 @@ a.button {
 	margin: 0;
 	transition: all 0.6s;
 	z-index: 0;
-	text-shadow: 2px 2px 3px #222;
+	text-shadow: 2px 2px 3px var(--secondary);
 }
 
 .unsubscribe .text.active {

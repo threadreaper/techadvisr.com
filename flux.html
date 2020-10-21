@@ -12,7 +12,7 @@
     <meta content="Meet Flux" property="og:title" />
     <meta content="Flux is an open source UX/UI design developed and maintained by Techadvisr
         for use across mixed media brand materials." property="og:description">
-    <link href="https://www.techadvisr.com/css/flux.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://www.techadvisr.com/css/flux.css" rel="stylesheet" type="text/css" />
     <link href="https://www.techadvisr.com/css/style.min.css" rel="stylesheet" type="text/css" />
     <script async src="https://www.techadvisr.com/js/lazysizes.min.js"></script>
     <link
@@ -35,7 +35,7 @@
     </div>
     <div class="header"></div>
     <div class="body">
-        <div class="wrapper-offset-primary" style="padding-top: 40px;">
+        <div class="wrapper-offset-primary" style="padding-top: 40px; position: absolute; top: -20px;">
             <h1>Welcome to Flux!</h1>
             <p>Flux is an open source UX/UI design developed and maintained by Techadvisr
                 for use across mixed media brand materials. For now, it includes a .css and a
@@ -231,7 +231,8 @@
                 secondary-light and primary-light background, respectively. You should
                 <span style="font-style: italic">always</span> use these content wrappers, as
                 they have rules defined to make necessary adjustments to element classes, in
-                order to keep the UX consistent across all background colors.  To switch the flex-direction, simply add the .col class to the wrapper div.
+                order to keep the UX consistent across all background colors. To switch the flex-direction, simply add
+                the .col class to the wrapper div.
             </p>
         </div>
         <div class="wrapper-offset-primary">
@@ -338,13 +339,13 @@
         <div class="wrapper">
             <div style="width: 45vw;">
                 <div class="text-input-container">
-                    <input class="text-input" type="text"> <label>First Name</label>
+                    <input class="text-input" required type="text"> <label>First Name</label>
                     <span class="focus-border"><i></i></span>
                 </div>
             </div>
             <div style="width: 45vw;">
                 <div class="text-input-container">
-                    <textarea class="text-input" rows="2"></textarea> <label>Message</label>
+                    <textarea class="text-input" required rows="2"></textarea> <label>Message</label>
                     <span class="focus-border"><i></i></span>
                 </div>
             </div>
@@ -352,13 +353,13 @@
         <div class="wrapper-offset-primary">
             <div style="width: 45vw;">
                 <div class="text-input-container">
-                    <input class="text-input" type="text"> <label>First Name</label>
+                    <input class="text-input" required type="text"> <label>First Name</label>
                     <span class="focus-border"><i></i></span>
                 </div>
             </div>
             <div style="width: 45vw;">
                 <div class="text-input-container">
-                    <textarea class="text-input" rows="2"></textarea> <label>Message</label>
+                    <textarea class="text-input" required rows="2"></textarea> <label>Message</label>
                     <span class="focus-border"><i></i></span>
                 </div>
             </div>
@@ -366,13 +367,13 @@
         <div class="wrapper-offset-secondary">
             <div style="width: 45vw;">
                 <div class="text-input-container">
-                    <input class="text-input" type="text"> <label>First Name</label>
+                    <input class="text-input" required type="text"> <label>First Name</label>
                     <span class="focus-border"><i></i></span>
                 </div>
             </div>
             <div style="width: 45vw;">
                 <div class="text-input-container">
-                    <textarea class="text-input" rows="2"></textarea> <label>Message</label>
+                    <textarea class="text-input" required rows="2"></textarea> <label>Message</label>
                     <span class="focus-border"><i></i></span>
                 </div>
             </div>
@@ -521,7 +522,7 @@
                         Preferred Customers delivered right to your inbox!</p>
                     <form>
                         <div class="text-input-container">
-                            <input class="text-input" type="text"> <label>E-mail Address</label>
+                            <input class="text-input" required type="text"> <label>E-mail Address</label>
                             <span class="focus-border"><i></i></span>
                         </div><button class="modal-button primary button" type="submit">Submit</button>
                     </form>
@@ -559,7 +560,7 @@
                     Preferred Customers delivered right to your inbox!</p>
                 <form>
                     <div class="text-input-container">
-                        <input class="text-input" type="text"> <label>E-mail Address</label>
+                        <input class="text-input" required type="text"> <label>E-mail Address</label>
                         <span class="focus-border"><i></i></span>
                     </div><button class="modal-button primary button" type="submit">Submit</button>
                 </form>
@@ -567,6 +568,14 @@
         </div>
         <iframe src="footer.html" onload="this.before(this.contentDocument.children[0]);this.remove()"></iframe>
         <script src="https://www.techadvisr.com/js/flux.min.js"></script>
+        <script>
+            modalReveal = qS(".modal-reveal");
+            if (modalReveal) {
+                modalReveal.addEventListener("click", function () {
+                    modal.style.visibility = "visible";
+                });
+            }
+        </script>
 </body>
 
 </html>

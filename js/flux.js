@@ -1,47 +1,12 @@
-const qS = document.querySelector.bind(document);
-
-function classToggle() {
-	"use strict";
-	var i, inputs;
-	inputs = document.querySelectorAll(".text-input");
-	for (i = 0; i < inputs.length; i += 1) {
-		if (inputs[i].value !== "") {
-			inputs[i].classList.add("has-content");
-		} else {
-			inputs[i].classList.remove("has-content");
-		}
-	}
-}
-
-var sliders;
-sliders = document.querySelectorAll(".slider");
-
-for (i = 0; i < sliders.length; i += 1) {
-	sliders[i].addEventListener("click", function () {
-		if (this.value == 0) {
-			this.value = 1;
-		} else {
-			this.value = 0;
-		}
-	});
-}
-
-var modal, modalButton, modalClose;
-var modal = qS(".modal");
-
-function showModal() {
+const qS = document.querySelector.bind(document),
+	modal = qS(".modal"),
+	modalClose = qS(".modalClose"),
 	storage = window.sessionStorage;
 
+function showModal() {
 	if (storage.getItem("modalSeen")) return;
 	storage.setItem("modalSeen", "true");
 	modal.style.visibility = "visible";
-}
-
-modalReveal = qS(".modal-reveal");
-if (modalReveal) {
-	modalReveal.addEventListener("click", function () {
-		modal.style.visibility = "visible";
-	});
 }
 
 if (modal) {
@@ -59,24 +24,10 @@ if (modal) {
 	});
 }
 
-modalClose = qS(".modal-close");
-
 if (modalClose) {
 	modalClose.addEventListener("click", function () {
 		modal.style.visibility = "hidden";
 	});
-
-	document.onscroll = function () {
-		var pos = getVerticalScrollPercentage(document.body);
-		var modalTrigger = getComputedStyle(document.documentElement)
-			.getPropertyValue("--modal-trigger")
-			.trim();
-		if (modalTrigger) {
-			if (pos > modalTrigger) {
-				showModal();
-			}
-		}
-	};
 }
 
 function getVerticalScrollPercentage(elm) {
@@ -87,6 +38,18 @@ function getVerticalScrollPercentage(elm) {
 			100;
 
 	return pos;
+}
+
+if (modalTrigger) {
+	document.onscroll = function () {
+		var pos = getVerticalScrollPercentage(document.body);
+		var modalTrigger = getComputedStyle(document.documentElement)
+			.getPropertyValue("--modal-trigger")
+			.trim();
+		if (pos > modalTrigger) {
+			showModal();
+		}
+	}
 }
 
 document.addEventListener("mouseleave", function (event) {

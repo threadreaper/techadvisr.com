@@ -101,15 +101,15 @@ body {
 
 .header {
 	position: fixed;
-    background: #222222bb;
-    border-bottom-right-radius: 16px;
+	background: #222222bb;
+	border-bottom-right-radius: 16px;
 	top: 0;
 	z-index: 1;
 	width: 260px;
-    height: 45px;
-    transition: 1s ease-in-out;
-    border-bottom: 4px ridge #aaa;
-    border-right: 4px ridge #aaa;
+	height: 45px;
+	transition: 1s ease-in-out;
+	border-bottom: 4px ridge #aaa;
+	border-right: 4px ridge #aaa;
 }
 
 #splash {
@@ -191,7 +191,7 @@ form .button {
 	margin-right: 15px;
 	width: 100%;
 	border: 2px solid #333;
-	box-shadow: 2px 2px 3px var(--secondary-light)666;
+	box-shadow: 2px 2px 3px var(--secondary-light) 666;
 }
 
 .wot-container {
@@ -520,7 +520,7 @@ div.social-icons {
 	width: 21px;
 	height: 4px;
 	border-radius: 5px;
-    background:var(--neutral);
+	background: var(--neutral);
 	cursor: pointer;
 	-webkit-transition: 1s ease-in;
 	transition: 1s ease-in-out;
@@ -586,8 +586,8 @@ div.social-icons {
 }
 
 #hamburger-input:checked ~ .header {
-    width: 250px;
-    border: 0;
+	width: 250px;
+	border: 0;
 }
 
 .logo {
@@ -607,13 +607,12 @@ div.social-icons {
 
 .body {
 	transition: 1s ease-in-out;
-	position: absolute;
-    width: 100%;
+	width: 100%;
 }
 
 #hamburger-input:checked ~ .body {
-    margin-left: 250px;
-    filter: blur(3px) opacity(50%) grayscale(100%);
+	margin-left: 250px;
+	filter: blur(3px) opacity(50%) grayscale(100%);
 }
 
 #sidenav {
