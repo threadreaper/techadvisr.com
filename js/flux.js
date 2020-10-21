@@ -13,7 +13,7 @@ function showModal() {
 if (modal) {
 	document.addEventListener("click", (evt) => {
 		let targetElement = evt.target; // clicked element
-		if (targetElement != modalReveal) {
+		if (modalReveal && targetElement != modalReveal) {
 			do {
 				if (targetElement == modal) {
 					return;
