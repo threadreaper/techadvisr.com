@@ -1,13 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+
 h1 {
-	font: 900 3.5rem var(--font-family-1);
-	letter-spacing: -1px;
+	font: 900 4rem var(--font-family-1);
 	text-shadow: 2px 2px 3px var(--secondary-light);
+	letter-spacing: -0.05em;
+	line-height: 1.1;
+	margin: 0 0 1.5rem 0;
 }
 
 h2 {
 	font: 800 3rem var(--font-family-1);
 	letter-spacing: -0.5px;
 	text-shadow: 2px 2px 3px var(--secondary-light);
+	margin: 0 0 2rem 0;
 }
 
 h3 {
@@ -49,8 +54,37 @@ h6 {
 
 .button {
 	font: 700 1.1rem var(--font-family-2);
-	letter-spacing: 1.25px;
 	text-transform: uppercase;
+	font-size: 0.8rem;
+	height: 3.75rem;
+	line-height: 3.75rem;
+	padding: 0 3.25rem;
+	transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out,
+		color 0.25s ease-in-out;
+	border-radius: 0.325rem;
+	border: 0;
+	cursor: pointer;
+	display: inline-block;
+	font-family: "Raleway", Helvetica, sans-serif;
+	font-weight: 600;
+	letter-spacing: 0.175em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 }
 
 .caption {
@@ -97,7 +131,6 @@ h6 {
 }
 
 :root {
-	font: 400 14px var(--font-family-2);
 	--primary: #0f0;
 	--primary-light: #5eff5e;
 	--primary-dark: #00a100;
@@ -111,7 +144,35 @@ h6 {
 	--on-secondary: #f2f2f2;
 	--on-neutral: #222;
 	--font-family-1: "Montserrat";
-	--font-family-2: "Lato";
+	--font-family-2: "Raleway";
+}
+
+html {
+	font-size: 18pt;
+}
+
+@media screen and (max-width: 1920px) {
+	html {
+		font-size: 13pt;
+	}
+}
+
+@media screen and (max-width: 1152px) {
+	html {
+		font-size: 14pt;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	html {
+		font-size: 12pt;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	html {
+		font-size: 11pt;
+	}
 }
 
 * {
@@ -119,13 +180,16 @@ h6 {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	vertical-align: baseline;
+	text-rendering: optimizeLegibility;
 }
 
 body {
 	background: var(--neutral);
-	font: 400 1rem var(--font-family-2);
-	letter-spacing: 0.5px;
+	font: 300 1rem var(--font-family-2);
 	color: var(--on-neutral);
+	-webkit-text-size-adjust: none;
+	letter-spacing: 0.0375em;
 }
 
 body::-webkit-scrollbar-track {
@@ -157,6 +221,20 @@ body::-webkit-scrollbar-thumb {
 		2px 2px 5px var(--secondary-dark);
 }
 
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input,
+select,
+textarea {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+}
+
 p {
 	font: 300 1rem var(--font-family-2);
 	letter-spacing: 0.25px;
@@ -164,7 +242,18 @@ p {
 }
 
 a {
+	-moz-transition: border-bottom-color 0.25s ease-in-out;
+	-webkit-transition: border-bottom-color 0.25s ease-in-out;
+	-ms-transition: border-bottom-color 0.25s ease-in-out;
+	transition: border-bottom-color 0.25s ease-in-out;
+	text-decoration: none;
 	color: inherit;
+	border-bottom: dotted 1px;
+}
+
+a:hover {
+	text-decoration: none;
+	border-bottom-color: transparent;
 }
 
 .icon {
@@ -225,21 +314,17 @@ a {
 		var(--primary-light),
 		var(--primary)
 	);
-	border: 1px solid var(--secondary);
-	padding: 9px;
-	border-radius: 6px;
+	border-radius: 0.325rem;
 	color: var(--secondary);
 	margin: 10px;
-	min-height: 48px;
+	min-height: 30px;
 	-webkit-box-shadow: 2px 2px 3px var(--secondary-light),
-		0 7px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
+		0 3px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
 	box-shadow: 2px 2px 3px var(--secondary-light),
-		0 7px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
+		0 3px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
 }
 
 .primary:active {
-	border: 1px solid var(--secondary);
-	padding: 9px;
 	-webkit-box-shadow: inset 2px 2px 5px var(--secondary-light),
 		0 5px rgba(0, 0, 0, 0.25) inset;
 	box-shadow: inset 2px 2px 5px var(--secondary-light),
@@ -259,34 +344,21 @@ a {
 		var(--neutral-offset),
 		var(--secondary-light)
 	);
-	border: 1px solid var(--secondary);
-	padding: 9px;
-	border-radius: 6px;
+	border-radius: 0.325rem;
 	color: var(--secondary-dark);
 	margin: 10px;
-	min-height: 48px;
+	min-height: 30px;
 	-webkit-box-shadow: 2px 2px 3px var(--secondary-light),
-		0 7px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
+		0 3px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
 	box-shadow: 2px 2px 3px var(--secondary-light),
-		0 7px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
+		0 3px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
 }
 
 .secondary:active {
-	border: 1px solid var(--secondary);
-	padding: 9px;
 	-webkit-box-shadow: inset 2px 2px 5px var(--secondary-light),
 		0 5px rgba(0, 0, 0, 0.25) inset;
 	box-shadow: inset 2px 2px 5px var(--secondary-light),
 		0 5px rgba(0, 0, 0, 0.25) inset;
-}
-
-@media screen and (min-width: 992px) {
-	.secondary:hover {
-		border: 1px solid var(--secondary);
-		padding: 9px;
-		-webkit-box-shadow: inset 2px 2px 5px var(--secondary-light);
-		box-shadow: inset 2px 2px 5px var(--secondary-light);
-	}
 }
 
 .neutral {
@@ -302,40 +374,21 @@ a {
 		var(--neutral),
 		var(--neutral-offset)
 	);
-	border: 1px solid var(--secondary);
-	padding: 9px;
-	border-radius: 6px;
+
+	border-radius: 0.325rem;
 	margin: 10px;
-	min-height: 48px;
+	min-height: 30px;
 	-webkit-box-shadow: 2px 2px 3px var(--secondary-light),
-		0 7px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
+		0 3px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
 	box-shadow: 2px 2px 3px var(--secondary-light),
-		0 7px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
+		0 3px rgba(255, 255, 255, 0.4) inset, 0 -2px rgba(0, 0, 0, 0.25) inset;
 }
 
 .neutral:active {
-	border: 1px solid var(--secondary);
-	padding: 9px;
 	-webkit-box-shadow: inset 2px 2px 5px var(--secondary-light),
 		0 5px rgba(0, 0, 0, 0.25) inset;
 	box-shadow: inset 2px 2px 5px var(--secondary-light),
 		0 5px rgba(0, 0, 0, 0.25) inset;
-}
-
-a.button {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
 }
 
 .wrapper {
@@ -442,7 +495,7 @@ a.button {
 	opacity: 1;
 	top: -4px;
 	left: 0;
-	border-radius: 6px;
+	border-radius: 0.325rem;
 	background: -moz-linear-gradient(
 		270deg,
 		#00ff00 0,
@@ -655,7 +708,7 @@ a.button {
 	font: 400 15px "Lato";
 	width: 100%;
 	letter-spacing: 1px;
-	border-radius: 6px;
+	border-radius: 0.325rem;
 	-webkit-box-shadow: inset 2px 2px 2px var(--secondary);
 	box-shadow: inset 2px 2px 2px var(--secondary);
 	padding: 7px;
@@ -670,7 +723,7 @@ a.button {
 	background: transparent;
 	height: calc(100% - 5px);
 	width: 0;
-	border-radius: 6px;
+	border-radius: 0.325rem;
 	pointer-events: none;
 	-webkit-transition: 0.6s ease-in;
 	transition: 0.6s ease-in;
@@ -699,7 +752,7 @@ textarea.text-input ~ .focus-border:before {
 	left: 0;
 	width: calc(100% - 5px);
 	height: 0;
-	border-radius: 6px;
+	border-radius: 0.325rem;
 	pointer-events: none;
 	-webkit-transition: 0.6s;
 	transition: 0.6s;
@@ -709,7 +762,6 @@ textarea.text-input ~ .focus-border i:before,
 textarea.text-input ~ .focus-border i:after {
 	width: calc(97% - 5px);
 }
-
 
 .text-input ~ .focus-border i:before {
 	border-left: 5px inset var(--secondary);
@@ -778,7 +830,7 @@ textarea.text-input:valid ~ .focus-border:after {
 }
 
 .card {
-	border-radius: 6px;
+	border-radius: 0.325rem;
 	max-width: 160px;
 	height: auto;
 	border: 1px solid var(--secondary-light);
@@ -814,7 +866,7 @@ textarea.text-input:valid ~ .focus-border:after {
 }
 
 .modal-content {
-	border-radius: 6px;
+	border-radius: 0.325rem;
 	border: 2px solid var(--secondary-light);
 	padding: 25px;
 	padding-bottom: 35px;
@@ -864,7 +916,7 @@ textarea.text-input:valid ~ .focus-border:after {
 	padding: 5px;
 	-webkit-box-shadow: 2px 2px 3px var(--secondary);
 	box-shadow: 2px 2px 3px var(--secondary);
-	border-radius: 6px;
+	border-radius: 0.325rem;
 	border: 1px solid var(--secondary-light);
 	position: fixed;
 	z-index: 5;
@@ -1000,7 +1052,7 @@ textarea.text-input:valid ~ .focus-border:after {
 	background: linear-gradient(to bottom right, #00ff00, var(--secondary));
 	border: 4px outset var(--neutral-offset);
 	box-shadow: 2px 2px 3px 1px var(--secondary);
-	border-radius: 6px;
+	border-radius: 0.325rem;
 	overflow: hidden;
 	padding: 15px 15px;
 	position: relative;

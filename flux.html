@@ -12,15 +12,12 @@
     <meta content="Meet Flux" property="og:title" />
     <meta content="Flux is an open source UX/UI design developed and maintained by Techadvisr
         for use across mixed media brand materials." property="og:description">
-    <link href="https://www.techadvisr.com/css/flux.css" rel="stylesheet" type="text/css" />
+    <link href="css/flux.min.css" rel="stylesheet" type="text/css" />
     <link href="https://www.techadvisr.com/css/style.min.css" rel="stylesheet" type="text/css" />
     <script async src="https://www.techadvisr.com/js/lazysizes.min.js"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet" />
 </head>
 
-<body>
+<body style="margin-top: -20px;">
     <input class="hamburger-input" id="hamburger-input" type="checkbox">
     <label class="hamburger" aria-label="Open/Close Menu" role="button" for="hamburger-input"></label>
     <a href="https://www.techadvisr.com/#top-wp"><img alt="Techadvisr logo" class="logo"
@@ -35,14 +32,13 @@
     </div>
     <div class="header"></div>
     <div class="body">
-        <div class="wrapper-offset-primary" style="padding-top: 40px; position: absolute; top: -20px;">
+        <div class="wrapper-offset-primary" style="padding-top: 40px;">
             <h1>Welcome to Flux!</h1>
             <p>Flux is an open source UX/UI design developed and maintained by Techadvisr
                 for use across mixed media brand materials. For now, it includes a .css and a
                 .js file for applying the UX design to website and email materials, along
                 with this document detailing the UX theory and usage.</p>
-        </div>
-        <div class="wrapper-offset-primary">
+ 
             <h4>Why re-invent the wheel? Why not just use Material Design?</h4>
             <p>When Google introduced its Material Design UX standard, it was quickly
                 adopted by designers everywhere, and is available as itself or in some
@@ -111,6 +107,7 @@
                 Flux for your website project, you provide credit and a link to <a
                     href="https://techadvisr.com">Techadvisr</a>.</p>
         </div>
+    </div>
         <div class="wrapper">
             <div
                 style="width: 100%; display: flex; align-items: center; white-space: nowrap; flex-wrap: nowrap; padding-top: 40px; padding-bottom: 40px;">
@@ -560,7 +557,7 @@
                     Preferred Customers delivered right to your inbox!</p>
                 <form>
                     <div class="text-input-container">
-                        <input class="text-input" required type="text"> <label>E-mail Address</label>
+                        <input class="text-input" required type="text"> <label>E-mail</label>
                         <span class="focus-border"><i></i></span>
                     </div><button class="modal-button primary button" type="submit">Submit</button>
                 </form>
