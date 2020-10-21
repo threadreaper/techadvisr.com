@@ -1,6 +1,7 @@
 const qS = document.querySelector.bind(document),
 	modal = qS(".modal"),
 	modalClose = qS(".modalClose"),
+	modalTrigger = getComputedStyle(document.documentElement).getPropertyValue('--modal-trigger'),
 	storage = window.sessionStorage;
 
 function showModal() {
