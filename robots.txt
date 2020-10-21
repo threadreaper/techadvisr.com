@@ -1,0 +1,5 @@
+# Group 1
+User-agent: *
+Disallow: /footer.html
+
+Sitemap: https://www.techadvisr.com/sitemap.xml
