@@ -260,7 +260,7 @@ form .button {
 	margin-right: 15px;
 	width: 100%;
 	border: 2px solid #333;
-	box-shadow: 2px 2px 3px #666666;
+	box-shadow: 2px 2px 3px var(--secondary-light)666;
 }
 
 .wot-container {
@@ -688,7 +688,6 @@ div.social-icons {
 .body {
 	transition: 1s ease-in-out;
 	position: absolute;
-    top: 40px;
     width: 100%;
 }
 

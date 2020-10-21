@@ -1,45 +1,35 @@
 h1 {
-	font: 900 4.5rem var(--font-family-1);
+	font: 900 3.5rem var(--font-family-1);
 	letter-spacing: -1px;
 	text-shadow: 2px 2px 3px var(--secondary-light);
 }
 
-.wrapper-offset-secondary h1 {
-	text-shadow: 1px 1px 3px var(--secondary);
-}
-
 h2 {
-	font: 800 4rem var(--font-family-1);
+	font: 800 3rem var(--font-family-1);
 	letter-spacing: -0.5px;
 	text-shadow: 2px 2px 3px var(--secondary-light);
 }
 
 h3 {
 	letter-spacing: normal;
-	font: 700 3.5rem var(--font-family-1);
+	font: 700 2.5rem var(--font-family-1);
 	text-shadow: 2px 2px 3px var(--secondary-light);
 }
 
+.wrapper-offset-secondary h1,
+.wrapper-offset-secondary h2,
+.wrapper-offset-secondary h3 {
+	text-shadow: 2px 2px 3px var(--secondary-dark);
+}
+
 h4 {
-	font: 600 3rem var(--font-family-1);
+	font: 600 2rem var(--font-family-1);
 	letter-spacing: 0.25px;
 }
 
-@media screen and (min-width: 992px) {
-	h4 {
-		font-size: 3.5vmin;
-	}
-}
-
 h5 {
-	font: 500 2rem var(--font-family-1);
+	font: 500 1.75rem var(--font-family-1);
 	letter-spacing: normal;
-}
-
-@media screen and (min-width: 992px) {
-	h5 {
-		font-size: 3vmin;
-	}
 }
 
 h6 {
@@ -48,54 +38,62 @@ h6 {
 }
 
 .subtitle-1 {
-	font: 2vmax var(--font-family-1);
+	font: 1.5rem var(--font-family-1);
 	letter-spacing: 2.5px;
 }
 
 .subtitle-2 {
-	font: 1.8vmax var(--font-family-1);
+	font: 1.25rem var(--font-family-1);
 	letter-spacing: normal;
 }
 
 .button {
-	font: 700 15px var(--font-family-2);
+	font: 700 1.1rem var(--font-family-2);
 	letter-spacing: 1.25px;
 	text-transform: uppercase;
 }
 
 .caption {
-	font: 12px var(--font-family-2);
+	font: 0.9rem var(--font-family-2);
 	letter-spacing: normal;
 }
 
 .overline {
-	font: 10px var(--font-family-2);
+	font: 0.8rem var(--font-family-2);
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
 }
 
 .filter-primary {
-	filter: invert(67%) sepia(41%) saturate(5074%) hue-rotate(78deg) brightness(110%) contrast(131%) drop-shadow(1px 1px 2px var(--secondary));
+	filter: invert(67%) sepia(41%) saturate(5074%) hue-rotate(78deg)
+		brightness(110%) contrast(131%)
+		drop-shadow(1px 1px 2px var(--secondary));
 }
 
 .filter-primary:hover {
-	filter: invert(100%) sepia(0%) saturate(271%) hue-rotate(66deg) brightness(114%) contrast(90%) drop-shadow(1px 1px 2px var(--secondary));
+	filter: invert(100%) sepia(0%) saturate(271%) hue-rotate(66deg)
+		brightness(114%) contrast(90%) drop-shadow(1px 1px 2px var(--secondary));
 }
 
 .filter-secondary {
-	filter: invert(10%) sepia(4%) saturate(0%) hue-rotate(221deg) brightness(90%) contrast(90%) drop-shadow(1px 1px 2px var(--secondary));
+	filter: invert(10%) sepia(4%) saturate(0%) hue-rotate(221deg)
+		brightness(90%) contrast(90%) drop-shadow(1px 1px 2px var(--secondary));
 }
 
 .filter-secondary:hover {
-	filter: invert(100%) sepia(0%) saturate(271%) hue-rotate(66deg) brightness(114%) contrast(90%) drop-shadow(1px 1px 2px var(--secondary));
+	filter: invert(100%) sepia(0%) saturate(271%) hue-rotate(66deg)
+		brightness(114%) contrast(90%) drop-shadow(1px 1px 2px var(--secondary));
 }
 
 .filter-neutral {
-	filter: invert(100%) sepia(0%) saturate(271%) hue-rotate(66deg) brightness(114%) contrast(90%) drop-shadow(1px 1px 2px var(--secondary));
+	filter: invert(100%) sepia(0%) saturate(271%) hue-rotate(66deg)
+		brightness(114%) contrast(90%) drop-shadow(1px 1px 2px var(--secondary));
 }
 
 .filter-neutral:hover {
-	filter: invert(67%) sepia(41%) saturate(5074%) hue-rotate(78deg) brightness(110%) contrast(131%) drop-shadow(1px 1px 2px var(--secondary));
+	filter: invert(67%) sepia(41%) saturate(5074%) hue-rotate(78deg)
+		brightness(110%) contrast(131%)
+		drop-shadow(1px 1px 2px var(--secondary));
 }
 
 :root {
@@ -117,21 +115,17 @@ h6 {
 }
 
 * {
-	border: 0;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 }
 
-html {
-	color: var(--on-neutral);
-}
-
 body {
 	background: var(--neutral);
 	font: 400 1rem var(--font-family-2);
 	letter-spacing: 0.5px;
+	color: var(--on-neutral);
 }
 
 body::-webkit-scrollbar-track {
@@ -164,9 +158,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 p {
-	font: 350 1rem var(--font-family-2);
+	font: 300 1rem var(--font-family-2);
 	letter-spacing: 0.25px;
-	line-height: 22px;
 	margin: 10px;
 }
 
@@ -329,15 +322,6 @@ a {
 		0 5px rgba(0, 0, 0, 0.25) inset;
 }
 
-@media screen and (min-width: 992px) {
-	.neutral:hover {
-		border: 1px solid var(--secondary);
-		padding: 9px;
-		-webkit-box-shadow: inset 2px 2px 5px var(--secondary-light);
-		box-shadow: inset 2px 2px 5px var(--secondary-light);
-	}
-}
-
 a.button {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -434,9 +418,6 @@ a.button {
 	color: var(--secondary-dark);
 }
 
-@media screen and (min-width: 992px) {
-}
-
 .checkbox {
 	position: relative;
 	padding-left: 50px;
@@ -459,34 +440,49 @@ a.button {
 .checkmark {
 	position: absolute;
 	opacity: 1;
-	top: -10px;
+	top: -4px;
 	left: 0;
 	border-radius: 6px;
+	background: -moz-linear-gradient(
+		270deg,
+		#00ff00 0,
+		#00a100 64%
+	); /* FF3.6+ */
+	background: -webkit-gradient(
+		linear,
+		270deg,
+		color-stop(0, 00ff00),
+		color-stop(64%, 00a100)
+	); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(
-		top,
-		var(--primary) 0%,
-		var(--primary-light) 61%,
-		var(--primary) 91%,
-		var(--primary-dark) 100%
-	);
-	height: 39px;
-	width: 39px;
+		270deg,
+		#00ff00 0,
+		#00a100 64%
+	); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(
+		270deg,
+		#00ff00 0,
+		#00a100 64%
+	); /* Opera 11.10+ */
+	background: -ms-linear-gradient(270deg, #00ff00 0, #00a100 64%); /* IE10+ */
+	height: 30px;
+	width: 30px;
 	border: 2px outset var(--neutral-offset);
 	-webkit-box-shadow: 3px 3px 6px 4px var(--secondary-light),
 		inset 4px 8px 5px var(--secondary-dark),
-		inset -1px0 3px var(--secondary-light);
+		inset -1px 0 3px var(--secondary-light);
 	box-shadow: 3px 3px 6px 4px var(--secondary-light),
 		inset 4px 8px 5px var(--secondary-dark),
-		inset -1px0 3px var(--secondary-light);
+		inset -1px 0 3px var(--secondary-light);
 }
 
 .wrapper-offset-primary .checkmark {
 	-webkit-box-shadow: 4px 4px 6px 4px var(--primary-dark),
 		-3px -3px 5px var(--neutral), inset 4px 8px 5px var(--secondary-dark),
-		inset -1px0 3px var(--secondary-light);
+		inset -1px 0 3px var(--secondary-light);
 	box-shadow: 4px 4px 6px 4px var(--primary-dark),
 		-3px -3px 5px var(--neutral), inset 4px 8px 5px var(--secondary-dark),
-		inset -1px0 3px var(--secondary-light);
+		inset -1px 0 3px var(--secondary-light);
 }
 
 .wrapper-offset-secondary .checkmark {
@@ -494,11 +490,11 @@ a.button {
 	-webkit-box-shadow: 4px 4px 6px 4px var(--secondary),
 		-2px -2px 5px var(--neutral-offset),
 		inset 4px 8px 5px var(--secondary-dark),
-		inset -1px0 3px var(--secondary-light);
+		inset -1px 0 3px var(--secondary-light);
 	box-shadow: 4px 4px 6px 4px var(--secondary),
 		-2px -2px 5px var(--neutral-offset),
 		inset 4px 8px 5px var(--secondary-dark),
-		inset -1px0 3px var(--secondary-light);
+		inset -1px 0 3px var(--secondary-light);
 }
 
 .checkmark:after {
@@ -512,14 +508,14 @@ a.button {
 }
 
 .checkbox .checkmark:after {
-	left: 16px;
-	top: -7px;
-	width: 10px;
-	height: 25px;
+	left: 12px;
+	top: -10px;
+	width: 8px;
+	height: 23px;
 	border: solid red;
-	-webkit-box-shadow: 5px 5px 4px var(--secondary-dark);
-	box-shadow: 5px 5px 4px var(--secondary-dark);
-	border-width: 0 6px 6px 0;
+	-webkit-box-shadow: 3px 3px 3px var(--secondary-dark);
+	box-shadow: 3px 3px 3px var(--secondary-dark);
+	border-width: 0 5px 5px 0;
 	-webkit-transform: rotate(40deg);
 	transform: rotate(40deg);
 }
@@ -528,6 +524,7 @@ a.button {
 	position: relative;
 	padding-left: 50px;
 	cursor: pointer;
+	top: 5px;
 	font: 17px var(--font-family-2);
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -549,34 +546,49 @@ a.button {
 	position: absolute;
 	top: -10px;
 	left: 0;
-	height: 39px;
-	width: 39px;
+	height: 30px;
+	width: 30px;
+	background: -moz-linear-gradient(
+		270deg,
+		#00ff00 0,
+		#00a100 64%
+	); /* FF3.6+ */
+	background: -webkit-gradient(
+		linear,
+		270deg,
+		color-stop(0, 00ff00),
+		color-stop(64%, 00a100)
+	); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(
-		top,
-		var(--primary) 0%,
-		var(--primary-light) 61%,
-		var(--primary) 91%,
-		var(--primary-dark) 100%
-	);
+		270deg,
+		#00ff00 0,
+		#00a100 64%
+	); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(
+		270deg,
+		#00ff00 0,
+		#00a100 64%
+	); /* Opera 11.10+ */
+	background: -ms-linear-gradient(270deg, #00ff00 0, #00a100 64%); /* IE10+ */
 	border-radius: 50%;
 	border: 2px outset var(--neutral-offset);
 	-webkit-box-shadow: 3px 3px 6px 4px var(--secondary-light),
 		inset 4px 8px 5px var(--secondary-dark),
-		inset -1px0 3px var(--secondary-light);
+		inset -1px 0 3px var(--secondary-light);
 	box-shadow: 3px 3px 6px 4px var(--secondary-light),
 		inset 4px 8px 5px var(--secondary-dark),
-		inset -1px0 3px var(--secondary-light);
+		inset -1px 0 3px var(--secondary-light);
 }
 
 .wrapper-offset-primary .radiomark {
 	-webkit-box-shadow: 3px 3px 6px 4px var(--primary-dark),
 		-1px -1px 3px 3px var(--neutral-offset),
 		inset 4px 8px 5px var(--secondary-dark),
-		inset -1px0 3px var(--secondary-light);
+		inset -1px 0 3px var(--secondary-light);
 	box-shadow: 3px 3px 6px 4px var(--primary-dark),
 		-1px -1px 3px 3px var(--neutral-offset),
 		inset 4px 8px 5px var(--secondary-dark),
-		inset -1px0 3px var(--secondary-light);
+		inset -1px 0 3px var(--secondary-light);
 }
 
 .wrapper-offset-secondary .radiomark {
@@ -584,52 +596,31 @@ a.button {
 	-webkit-box-shadow: 4px 4px 8px 5px var(--secondary),
 		-1px -1px 4px 3px var(--neutral-offset),
 		inset 4px 8px 5px var(--secondary-dark),
-		inset -1px0 3px var(--secondary-light);
+		inset -1px 0 3px var(--secondary-light);
 	box-shadow: 4px 4px 8px 5px var(--secondary),
 		-1px -1px 4px 3px var(--neutral-offset),
 		inset 4px 8px 5px var(--secondary-dark),
-		inset -1px0 3px var(--secondary-light);
+		inset -1px 0 3px var(--secondary-light);
 }
 
-.radiomark:before,
 .radiomark:after {
 	content: "";
 	position: absolute;
 	display: none;
 }
 
-.radio input:checked ~ .radiomark:before,
 .radio input:checked ~ .radiomark:after {
 	display: block;
 }
 
-.radio .radiomark:before {
-	top: 5px;
-	left: 5px;
-	width: 25px;
-	height: 25px;
-	border-radius: 50%;
-	background: -webkit-linear-gradient(
-		top left,
-		var(--neutral-offset) 0%,
-		var(--secondary-light) 100%
-	);
-	-webkit-box-shadow: inset 2px 3px var(--neutral),
-		inset -3px -3px 3px var(--secondary-light),
-		3px 3px 3px var(--secondary-dark);
-	box-shadow: inset 2px 3px var(--neutral),
-		inset -3px -3px 3px var(--secondary-light),
-		3px 3px 3px var(--secondary-dark);
-}
-
 .radio .radiomark:after {
-	left: 16px;
-	top: -7px;
-	width: 10px;
-	height: 25px;
+	left: 12px;
+	top: -10px;
+	width: 8px;
+	height: 23px;
 	border: solid red;
-	-webkit-box-shadow: 4px 4px 4px var(--secondary-dark);
-	box-shadow: 4px 4px 4px var(--secondary-dark);
+	-webkit-box-shadow: 3px 3px 3px var(--secondary-dark);
+	box-shadow: 3px 3px 3px var(--secondary-dark);
 	border-width: 0 5px 5px 0;
 	-webkit-transform: rotate(40deg);
 	transform: rotate(40deg);
@@ -871,6 +862,7 @@ a.button {
 	right: 30px;
 	bottom: 200px;
 	visibility: hidden;
+	transition: 0.5s ease-in-out;
 }
 
 .modal-button {
@@ -882,176 +874,103 @@ a.button {
 
 .slider-label {
 	position: relative;
-	left: 100px;
-	top: -10px;
 	font: 17px var(--font-family-2);
+	left: 120px;
+	top: -17px;
 }
 
-input[type="range"].slider {
-	width: 98px;
-	height: 40px;
-	background: var(--neutral);
-	border-radius: 34px;
-	-webkit-box-shadow: 4px 4px 8px 5px var(--secondary-light);
-	box-shadow: 4px 4px 8px 5px var(--secondary-light);
-	border: 2px outset var(--neutral-offset);
+.slider {
+	width: 150px;
+	height: 48px;
+	background: #f2f2f2;
+	border-radius: 24px;
+	position: absolute;
+	left: -220px;
+	top: 20px;
+	box-shadow: inset 10px 10px 15px #222,
+		4px 4px 8px 5px var(--secondary-highlight),
+		-1px -1px 4px 3px var(--neutral-offset);
+	background: -moz-linear-gradient(
+		270deg,
+		#00ff00 0,
+		#00a100 64%
+	); /* FF3.6+ */
+	background: -webkit-gradient(
+		linear,
+		270deg,
+		color-stop(0, 00ff00),
+		color-stop(64%, 00a100)
+	); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(
+		270deg,
+		#00ff00 0,
+		#00a100 64%
+	); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(
+		270deg,
+		#00ff00 0,
+		#00a100 64%
+	); /* Opera 11.10+ */
+	background: -ms-linear-gradient(270deg, #00ff00 0, #00a100 64%); /* IE10+ */
+	border: 4px outset #555;
+	border-right: 4px outset #888;
+	border-bottom: 4px outset #888;
 	position: relative;
-	left: -170px;
-	top: 10px;
 	-webkit-appearance: none;
+}
+
+.slider:focus {
+	outline-offset: 10px;
+}
+
+.slider::-moz-range-thumb {
+	width: 80px;
+	height: 46px;
+	background: -webkit-linear-gradient(top left, #f2f2f2 0%, #696969 100%);
+	border: 1px solid #696969;
+	border-radius: 21px;
+	box-shadow: inset 4px 4px #f2f2f2, inset -3px -3px 3px #696969,
+		0 2px 3px #222;
+	cursor: pointer;
+	-moz-appearance: none;
+	z-index: 2;
+}
+
+.slider::-webkit-slider-thumb {
+	position: relative;
+	top: -1px;
+	width: 80px;
+	height: 52px;
+	background: -webkit-linear-gradient(top left, #f2f2f2 0%, #696969 100%);
+	border: 1px solid #696969;
+	border-radius: 21px;
+	box-shadow: inset 4px 4px #f2f2f2, inset -3px -3px 3px #696969,
+		0 2px 3px #222;
+	cursor: pointer;
+	-webkit-appearance: none;
+	z-index: 2;
+}
+
+.slider::-webkit-slider-thumb:hover {
+	position: relative;
+	top: 0;
+	box-shadow: inset 4px 4px #f2f2f2, inset -3px -3px 3px #696969,
+		0 2px 3px #222;
 }
 
 .wrapper-offset-primary input[type="range"].slider {
 	-webkit-box-shadow: 4px 4px 8px 5px var(--primary-dark),
-		-2px -2px 4px 4px var(--neutral-offset);
-	box-shadow: 4px 4px 8px 5px var(--primary-dark),
+		inset 10px 10px 15px #222, -2px -2px 4px 4px var(--neutral-offset);
+	box-shadow: 4px 4px 8px 5px var(--primary-dark), inset 10px 10px 15px #222,
 		-2px -2px 4px 4px var(--neutral-offset);
 }
 
 .wrapper-offset-secondary input[type="range"].slider {
 	border: 2px outset var(--secondary-highlight);
 	-webkit-box-shadow: 4px 4px 8px 5px var(--secondary),
+		inset 10px 10px 15px #222, -1px -1px 4px 3px var(--neutral-offset);
+	box-shadow: 4px 4px 8px 5px var(--secondary), inset 10px 10px 15px #222,
 		-1px -1px 4px 3px var(--neutral-offset);
-	box-shadow: 4px 4px 8px 5px var(--secondary),
-		-1px -1px 4px 3px var(--neutral-offset);
-}
-
-.slider:focus {
-	outline: none;
-}
-
-input[type="range"].slider::-webkit-slider-runnable-track {
-	height: 39px;
-	border-radius: 26px;
-	background: -webkit-linear-gradient(
-		top,
-		var(--primary) 0%,
-		var(--primary-light) 61%,
-		var(--primary) 91%,
-		var(--primary-dark) 100%
-	);
-	-webkit-box-shadow: inset 0 8px 14px var(--secondary-dark),
-		inset -1px0 3px var(--secondary-light);
-	box-shadow: inset 0 8px 14px var(--secondary-dark),
-		inset -1px0 3px var(--secondary-light);
-	border: 2px inset var(--neutral);
-	top: 4px;
-	left: 4px;
-}
-
-input[type="range"].slider::-webkit-slider-thumb {
-	width: 60px;
-	height: 34px;
-	background: -webkit-linear-gradient(
-		top left,
-		var(--neutral) 0%,
-		var(--secondary-light) 100%
-	);
-	border-radius: 24px;
-	border: 1px solid var(--secondary-light);
-	cursor: pointer;
-	-webkit-appearance: none;
-	-webkit-box-shadow: inset 4px 4px var(--neutral),
-		inset -3px -3px 3px var(--secondary-light), 0 2px 3px #222;
-	box-shadow: inset 4px 4px var(--neutral),
-		inset -3px -3px 3px var(--secondary-light), 0 2px 3px #222;
-}
-
-input[type="range"].slider::-moz-range-track {
-	width: 90px;
-	height: 40px;
-	border-radius: 26px;
-	background: -webkit-linear-gradient(
-		top,
-		var(--primary) 0%,
-		var(--primary-light) 61%,
-		var(--primary) 91%,
-		var(--primary-dark) 100%
-	);
-	box-shadow: inset 0 8px 14px var(--secondary-dark),
-		inset -1px0 3px var(--secondary-light);
-	border: 2px inset var(--neutral);
-	top: 4px;
-	left: 4px;
-}
-
-input[type="range"].slider::-moz-range-thumb {
-	width: 60px;
-	height: 34px;
-	background: -webkit-linear-gradient(
-		top left,
-		var(--neutral) 0%,
-		var(--secondary-light) 100%
-	);
-	border-radius: 24px;
-	border: 1px solid var(--secondary-light);
-	cursor: pointer;
-	-webkit-appearance: none;
-	box-shadow: inset 4px 4px var(--neutral),
-		inset -3px -3px 3px var(--secondary-light), 0 2px 3px #222;
-}
-
-input[type="range"].slider::-ms-track {
-	width: 90px;
-	height: 40px;
-	border-radius: 26px;
-	background: -webkit-linear-gradient(
-		top,
-		var(--primary) 0%,
-		var(--primary-light) 61%,
-		var(--primary) 91%,
-		var(--primary-dark) 100%
-	);
-	box-shadow: inset 0 8px 14px var(--secondary-dark),
-		inset -1px0 3px var(--secondary-light);
-	border: 2px inset var(--neutral);
-	top: 4px;
-	left: 4px;
-}
-
-input[type="range"].slider::-ms-fill-lower {
-	background: transparent;
-}
-
-input[type="range"].slider::-ms-fill-upper {
-	background: transparent;
-}
-
-input[type="range"].slider::-ms-thumb {
-	width: 60px;
-	height: 34px;
-	background: -webkit-linear-gradient(
-		top left,
-		var(--neutral) 0%,
-		var(--secondary-light) 100%
-	);
-	border-radius: 24px;
-	border: 1px solid var(--secondary-light);
-	cursor: pointer;
-	-webkit-appearance: none;
-	box-shadow: inset 4px 4px var(--neutral),
-		inset -3px -3px 3px var(--secondary-light), 0 2px 3px #222;
-	margin-top: 0;
-	/*Needed to keep the Edge thumb centred*/
-}
-
-input[type="range"].slider:focus::-ms-fill-lower {
-	background: transparent;
-}
-
-input[type="range"].slider:focus::-ms-fill-upper {
-	background: transparent;
-}
-
-/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
-how to remove the virtical space around the range input in IE*/
-
-@supports (-ms-ime-align: auto) {
-	/* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
-	input[type="range"].slider {
-		margin: 0;
-		/*Edge starts the margin from the thumb, not the track as other browsers do*/
-	}
 }
 
 .unsubscribe {
